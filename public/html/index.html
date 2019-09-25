@@ -1,86 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    
-    <head>
 
-            <link rel="stylesheet" type="text/css" href="/public/styles/styles.css">
 
-        <!-- bootstrap -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
-        <!-- google font -->
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
 
-      
-        
-     
-        <title>DarStar Behavior Tracker</title>
-          
-    </head>
-    
-    
-    
-    
-    <body>
-    
-   <header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- possible nav section -->
-        
-       <nav>
-           <p class="d-none">DarStar Tracker</p> 
-       
-       
-       </nav>
+    <link rel="stylesheet" type="text/css" href="/public/styles/styles.css">
 
-       <!-- main text centered -->
-       
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
+
+
+    <!-- <title>Behavior Log</title> -->
+
+    <title>DarStar Behavior Tracker</title>
+
+    <!-- <title>Teacher - Record Input</title> -->
+
+</head>
+
+
+
+
+<body>
+
+    <header>
+
+        <!-- possible nav section -->
+
+        <nav>
+            <p class="d-none">DarStar Tracker</p>
+
+
+        </nav>
+
+        <!-- main text centered -->
+
         <div class="container maintext text-center text-white ">
-           
-            <h1>Welcome to DarStar Behavior Tracker!</h1>
 
-        <!-- home page buttons for parents and teachers -->
+            <h1></h1>
+            <p class='text'>Welcome to DarStar Behavior Tracker! </p>
 
-            <a class="btn btnParent pr-5 pl-5 m-3" href="parent.html"><h4>Parent</h4></a> 
+            <!-- home page buttons for parents and teachers -->
 
-            <a class="btn btnTeacher pr-5 pl-5 m-3" href="teacher.html"><h4>Teacher</h4></a>
+            <a class="btn btnParent pr-5 pl-5 m-3" href="parent.html">
+                <h4>Parent</h4>
+            </a>
+
+            <a class="btn btnTeacher pr-5 pl-5 m-3" href="teacher.html">
+                <h4>Teacher</h4>
+            </a>
 
 
-       
-       </div>
-        
-        
-        </header>
-    
-    
-        <!-- <section class="firstsec">Placeholder </section>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- <section class="firstsec">Placeholder </section>
         
         
         
         <section class="sec-sect">  Placeholder </section> -->
-        
-        
-  
-        
-        
-        
-    </body>
 
 
 
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 
 <script>
 
-    $('.behaveBtn').on('click', function(event){
+    $('.behaveBtn').on('click', function (event) {
 
         event.preventDefault();
-        
+
         console.log('clicked')
 
         console.log(event)

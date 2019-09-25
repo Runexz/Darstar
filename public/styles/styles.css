@@ -21,6 +21,25 @@ header{
   background-position: center;
 }
 
+.header-parent{
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/student.png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+
+
+}
+
+.header-teacher{
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/bookpencils.png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+
+}
+
 
 
 
@@ -41,18 +60,26 @@ header{
   
 }
 
+.text{
 
-
-h1{
+  font-size: 80px;
+  font-family: 'Permanent Marker', cursive;
   font-weight:500;
   color: #fff;
-  font-size: 150px;
+  font-size: 52px;
   text-transform: capitalize;
   letter-spacing: 1px;
   word-spacing: 1px;
+
+}
+
+
+
+/* h1{
+  
  font-family: 'Permanent Marker', cursive;
   
-}
+} */
 
 /* BUTTONS */
 
