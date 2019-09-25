@@ -55,7 +55,6 @@ header{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* font-family: 'Dancing Script', cursive; */
   
   
 }
@@ -75,11 +74,23 @@ header{
 
 
 
-/* h1{
+.markerFont{
+
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.dancingScriptFont{
+
+  font-family: 'Dancing Script', cursive;
+
+}
   
- font-family: 'Permanent Marker', cursive;
+
   
-} */
+
+  
+
 
 /* BUTTONS */
 
@@ -119,6 +130,18 @@ header{
     color: #fff;
     
 } */
+/* 
 
 
+.pico{
+  width: 10px
+}
 
+.teaBeLogTab{
+  margin-left: 50%;
+  margin-right: 50%;
+} */
+
+.behTabTitle{
+  font-size: 25px;
+}
