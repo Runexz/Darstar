@@ -33,16 +33,45 @@
 
     <div class="header-teacher">
 
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+            <a class="navbar-brand" href="index.html">DarStar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="parent.html">Parent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="teacher.html">Teacher</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+             
+              </ul>
+              <form class="form-inline my-2 my-lg-0 navSearch">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+
       <div class="container">
 
         <!-- jumbotron -->
 
         <div class="jumbotron">
           <h1 class="display-4 text text-dark">DarStar!</h1>
-          <p class="lead mt-3">The easiest way for you to track your student's behavior and staying in contact with
-            their teachers!</p>
+          
           <hr class="my-4">
-          <p>To begin, please enter your student's ID number below:</p>
+          <p>To begin, please enter the student's ID number below:</p>
 
 
           <!-- student ID input -->
@@ -53,7 +82,7 @@
               <label for="inputPassword3" class="sr-only">Password</label>
               <input type="password" class="form-control" id="inputPassword3" placeholder="Student's ID">
             </div>
-            <button type="submit" class="btn btn-primary teachStuIdBtn mb-2">Confirm identity</button>
+            <button type="submit" class="btn btn-primary teachStuIdBtn mb-2 ml-3">Find Student</button>
           </form>
 
 
@@ -78,8 +107,8 @@
             <table class="table bg-white ">
               <thead class="thead-dark text-center">
                 <tr>
-                  <th scope="col">Category:</th>
-                  <th scope="col">Rating</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Score</th>
 
                 </tr>
               </thead>
@@ -241,6 +270,7 @@
         </div>
 
 
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
 
 
       </div>
