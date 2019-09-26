@@ -14,6 +14,11 @@
 
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
+  
+  
+  <!-- font-awesome -->
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
   <title>Student Behavior Log</title>
@@ -33,34 +38,35 @@
 
     <div class="header-parent">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
-            <a class="navbar-brand" href="index.html">DarStar!</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="parent.html">Parent</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="teacher.html">Teacher</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-             
-              </ul>
-              <form class="form-inline my-2 my-lg-0 navSearch">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-              </form>
-            </div>
-          </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand" href="index.html">DarStar!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parent.html">Parent</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teacher.html">Teacher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0 navSearch">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
 
       <div class="container">
 
@@ -82,49 +88,115 @@
               <label for="inputPassword2" class="sr-only">Password</label>
               <input type="password" class="form-control idForm" id="inputPassword2" placeholder="Student's ID">
             </div>
-            <button type="submit" class="btn btn-primary StuIdBtn mb-2">Confirm identity</button>
+            <button type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3">Confirm identity</button>
           </form>
 
 
         </div>
 
+
+
+        <div class="card behavTab">
+
+          <!-- --------------------------------------------------------------------------------------- -->
+
+          <!-- student name and Id to be pulled from mysql database -->
+
+          
         <!-- --------------------------------------------------------------------------------------- -->
 
 
-        <!-- create a table to display child's behavior log on click -->
 
-        <!-- --------------------------------------------------------------------------------------- -->
+          <h5 class="card-header stuNameID">//student Name// + //iD//</h5>
+          <div class="card-body">
 
-        <table class="table behavTab bg-white">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Student Name:</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col">ID:</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>----</td>
-              <td>----</td>
-              <td>----</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>----</td>
-              <td>----</td>
-              <td>----</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>----</td>
-              <td>----</td>
-              <td>----</td>
-            </tr>
-          </tbody>
-        </table>
+            <!-- second box in scoreboard display -->
+            <div class="row">
+              <div class="col-sm-6 behavColor">
+
+
+                <div class="colorWritten">
+                  <p class="text-center colorNameDisplay">color placeholder</p>
+                  <p class="text-center colorNameDisplay">color to be updated upon receipt of number</p>
+                </div>
+
+              </div>
+
+
+              <!-- second box in scoreboard display -->
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+
+                    <table class="table  bg-white">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Category</th>
+
+                          <th scope="col">Score</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Perseverance</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Leadership</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Uplift</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Scholarship</th>
+                          <td>----</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+
+
+
+          </div>
+        </div>
+
+        
+        <div class="card behavTab mt-3">
+
+
+            <h5 class="card-header">Teacher's comment:</h5>
+          <div class="card-body">
+            <p class="comToPost">-----</p>
+          </div>
+        </div>
+
+
+        <a href="/public/html/contact.html"><i class="fa fa-address-card" ></i> icon-retro-card</a>
+
+        
+
+
+        
+
+
+
+
 
 
 
@@ -154,6 +226,18 @@
 
 
 
+    //-----------------------------------------------------------------------------------------------
+
+    //create if statement to check that form has been filled out completely
+
+
+    //-----------------------------------------------------------------------------------------------
+
+
+
+    //button for parent to look up students
+    //text sent to mysql, return with data to display the table $('.behavTab').show()
+
     $('.StuIdBtn').on('click', function (event) {
 
       event.preventDefault();
@@ -166,7 +250,16 @@
 
       console.log(formVal)
 
+      $('.jumbotron').slideUp()
+
       $('.behavTab').show()
+
+      $('.contactBtn').on('click', function(){
+
+        window.location.href='contact.html'
+        
+      })
+
 
     })
 
