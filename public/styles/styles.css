@@ -149,3 +149,9 @@ header{
 .behavColor{
   background-color: blue;
 }
+
+.teachPic{
+  width: 140px;
+  border-radius: 50%;
+  margin: auto;
+}
