@@ -5,16 +5,8 @@
 }
 
 
-/* 
-html {
-  overflow: hidden;
-  height: 100%;
-}
 
-body {
-  height: 100%;
-  overflow: auto;
-} */
+
 
 html{
   background-color: #fff;
@@ -25,8 +17,18 @@ html{
   text-rendering: optimizeLegibility;
 
 
+  /* scrolling */
+  /* overflow: hidden;
+  height: 100%; */
+
+
   
 }
+
+/* body {
+  height: 100%;
+  overflow: auto;
+} */
 
 header{
   background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/teacher.png');
@@ -41,6 +43,7 @@ header{
   background-size: cover;
   height: 100vh;
   background-position: center;
+  overflow: overlay;
 
 
 }
@@ -51,6 +54,7 @@ header{
   background-size: cover;
   height: 100vh;
   background-position: center;
+  overflow: overlay;
 
 }
 

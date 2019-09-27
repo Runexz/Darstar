@@ -39,7 +39,7 @@
     <div class="header-teacher">
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <a class="navbar-brand" href="index.html">DarStar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -253,10 +253,47 @@
             </table>
 
 
+            <div class="row">
+
+              <div class="col-12">
+
+                  <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
+                  placeholder="Leave a comment here"></textarea>
 
 
-            <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
-              placeholder="Leave a comment here"></textarea>
+              </div>
+
+               
+  
+  
+  
+  
+                <div class="col-4 mb-5">
+  
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+  
+                </div>
+  
+
+
+            </div>
+
+
+           
+
+
+
+
+
 
 
 
@@ -329,7 +366,7 @@
 
       console.log(event);
 
-     
+
 
       $('.jumbotron').hide();
 
@@ -380,7 +417,7 @@
       var teacherCommment = $('#teachComment').val();
 
 
-      
+
 
       console.log("teacher comment: " + teacherCommment)
       console.log("total score: " + scoreTotal)
