@@ -14,13 +14,13 @@
 
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
-  
-  
+
+
   <!-- font-awesome -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
+
 
 
   <title>Student Behavior Log</title>
@@ -40,7 +40,7 @@
 
     <div class="header-parent">
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <nav class="navbar navbaro sticky-top navbar-expand-lg navbar-dark bg-dark mb-5">
         <a class="navbar-brand" href="index.html">DarStar!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,11 +76,11 @@
 
         <div class="jumbotron">
           <h1 class="display-4 text text-dark">DarStar!</h1>
-          
+
           <hr class="my-4">
 
           <p class="lead mt-3 mb-2">The easiest way for you to track your student's behavior and staying in contact with
-              their teachers!</p>
+            their teachers!</p>
 
           <!-- <p>To begin, please enter your student's ID number below:</p> -->
 
@@ -95,9 +95,30 @@
             </div>
             <input type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3"></input>
           </form>
+          <span></span>
 
 
         </div>
+
+
+        
+<!-- 
+        <form name="buy" id="buy" action="#" method="post" class="form-inline ">
+
+            <div class="form-group mb-2">
+
+              <label for="inputPassword2" class="sr-only">Password</label>
+              <input type="text" name="productSize" id="productSize" value="" />
+
+               <input type="password" class="form-control idForm" id="inputPassword2" placeholder="Student's ID"> -->
+            <!-- </div>
+            <input type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3"></input>
+          </form> --> -->
+
+
+        
+        
+      </form>
 
 
 
@@ -107,8 +128,8 @@
 
           <!-- student name and Id to be pulled from mysql database -->
 
-          
-        <!-- --------------------------------------------------------------------------------------- -->
+
+          <!-- --------------------------------------------------------------------------------------- -->
 
 
 
@@ -117,7 +138,7 @@
 
             <!-- first box in scoreboard display -->
             <div class="row">
-              
+
 
 
               <!-- second box in scoreboard display -->
@@ -168,37 +189,37 @@
               <div class="col-sm-6 behavColor">
 
 
-                  <div class="colorWritten">
-                    <p class="text-center colorNameDisplay">color placeholder</p>
-                    <p class="text-center colorNameDisplay">color to be updated upon receipt of number</p>
-                  </div>
-  
+                <div class="colorWritten">
+                  <p class="text-center colorNameDisplay">color placeholder</p>
+                  <p class="text-center colorNameDisplay">color to be updated upon receipt of number</p>
                 </div>
+
+              </div>
 
 
             </div>
 
-          
+
 
 
 
           </div>
         </div>
 
-        
+
         <div class="card behavTab mt-3">
 
 
-            <h5 class="card-header">Teacher's comment:</h5>
+          <h5 class="card-header">Teacher's comment:</h5>
           <div class="card-body">
             <p class="comToPost">-----</p>
           </div>
         </div>
 
 
-        <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x" ></i></a>
+        <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x"></i></a>
 
-    
+
 
       </div>
 
@@ -221,11 +242,24 @@
       console.log("Doc is ready!");
       $('.behavTab').hide()
 
-      $('input:file').on("change", function() {
-    $('input:submit').prop('disabled', !$(this).val()); 
-});
-
+  
     });
+
+    $(".StuIdBtn").click(function() {
+        var size = $(this).attr('id');
+        $('#productSize').val(size);
+    });
+
+    $('#buy').submit(function() {
+          if ($('#productSize').val().length < 1) {
+                $('#error').html('My Error Message').show();
+                return false;
+          }
+    });
+
+
+
+  
 
 
 
@@ -238,8 +272,8 @@
 
 
 
-    //button for parent to look up students
-    //text sent to mysql, return with data to display the table $('.behavTab').show()
+    // button for parent to look up students
+    // text sent to mysql, return with data to display the table $('.behavTab').show()
 
     $('.StuIdBtn').on('click', function (event) {
 
@@ -257,10 +291,10 @@
 
       $('.behavTab').show()
 
-      $('.contactBtn').on('click', function(){
+      $('.contactBtn').on('click', function () {
 
-        window.location.href='contact.html'
-        
+        window.location.href = 'contact.html'
+
       })
 
 

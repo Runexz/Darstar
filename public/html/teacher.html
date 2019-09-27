@@ -15,9 +15,11 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
 
+ 
+  
   <!-- font-awesome -->
 
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -39,7 +41,7 @@
     <div class="header-teacher">
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+      <nav class="navbar navbaro sticky-top navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <a class="navbar-brand" href="index.html">DarStar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +83,7 @@
 
 
           <!-- student ID input -->
-          <form class="form-inline">
+          <form id="form" action="" class="form-inline">
 
             <div class="form-group mb-2">
 
@@ -268,7 +270,7 @@
   
   
   
-                <div class="col-4 mb-5">
+                <div class="col-6 mb-5">
   
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -288,12 +290,7 @@
             </div>
 
 
-           
-
-
-
-
-
+    
 
 
 
@@ -309,7 +306,7 @@
 
         </div>
 
-        <div class="card teaBeLogTab mt-2">
+        <div class="card teaBeLogTab mt-2 mb-5">
 
 
           <h5 class="card-header">Announcements</h5>
@@ -356,23 +353,32 @@
     //-----------------------------------------------------------------------------------------------
 
 
-    //button on-click for teacher to look up student
 
-    $('.teachStuIdBtn').on('click', function (event) {
+    $("#form").submit(function(event) {
+    var textarea = $("#inputPassword3");
+    if (textarea.val().trim() === "") {
+      // No message, add red highlighting to indicate error
+      textarea.css("box-shadow", "0 0 4px #811");
 
+      // The default event now would be to submit the form. The browser will do
+      // this automatically when clicking a submit button. We prevent this using
+      // preventDefault(). This way, the form will not be submitted.
       event.preventDefault();
+    } else {
+      // Nothing to do, let the form be submitted.
 
-      console.log('clicked to enter id btn');
-
-      console.log(event);
-
-
+      console.log('ready to submit')
 
       $('.jumbotron').hide();
 
       $('.teaBeLogTab').show();
+      event.preventDefault();
+    }
+  });
 
-    })
+
+
+
 
     //button on-click for teacher submit behavior log
 
