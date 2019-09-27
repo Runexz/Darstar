@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" type="text/css" href="/public/styles/styles.css">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
+  
+  
+  <!-- font-awesome -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+
+
+  <title>Student Behavior Log</title>
+
+  <!-- <title>DarStar Behavior Tracker</title> -->
+
+  <!-- <title>Teacher - Record Input</title> -->
+
+</head>
+
+<body>
+
+
+
+
+  <section>
+
+    <div class="header-parent">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+        <a class="navbar-brand" href="index.html">DarStar!</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parent.html">Parent</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teacher.html">Teacher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0 navSearch">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0 disabled" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+
+      <div class="container">
+
+        <!-- jumbotron -->
+
+        <div class="jumbotron">
+          <h1 class="display-4 text text-dark">DarStar!</h1>
+          
+          <hr class="my-4">
+
+          <p class="lead mt-3 mb-2">The easiest way for you to track your student's behavior and staying in contact with
+              their teachers!</p>
+
+          <!-- <p>To begin, please enter your student's ID number below:</p> -->
+
+
+          <!-- student ID input -->
+          <form action="#" method="post" class="form-inline ">
+
+            <div class="form-group mb-2">
+
+              <label for="inputPassword2" class="sr-only">Password</label>
+              <input type="password" class="form-control idForm" id="inputPassword2" placeholder="Student's ID">
+            </div>
+            <input type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3"></input>
+          </form>
+
+
+        </div>
+
+
+
+        <div class="card behavTab">
+
+          <!-- --------------------------------------------------------------------------------------- -->
+
+          <!-- student name and Id to be pulled from mysql database -->
+
+          
+        <!-- --------------------------------------------------------------------------------------- -->
+
+
+
+          <h5 class="card-header stuNameID">//student Name// + //iD//</h5>
+          <div class="card-body">
+
+            <!-- first box in scoreboard display -->
+            <div class="row">
+              
+
+
+              <!-- second box in scoreboard display -->
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+
+                    <table class="table  bg-white">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Category</th>
+
+                          <th scope="col">Score</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Perseverance</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Leadership</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Uplift</th>
+                          <td>----</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Scholarship</th>
+                          <td>----</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+
+
+
+
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 behavColor">
+
+
+                  <div class="colorWritten">
+                    <p class="text-center colorNameDisplay">color placeholder</p>
+                    <p class="text-center colorNameDisplay">color to be updated upon receipt of number</p>
+                  </div>
+  
+                </div>
+
+
+            </div>
+
+          
+
+
+
+          </div>
+        </div>
+
+        
+        <div class="card behavTab mt-3">
+
+
+            <h5 class="card-header">Teacher's comment:</h5>
+          <div class="card-body">
+            <p class="comToPost">-----</p>
+          </div>
+        </div>
+
+
+        <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x" ></i></a>
+
+    
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      console.log("Doc is ready!");
+      $('.behavTab').hide()
+
+      $('input:file').on("change", function() {
+    $('input:submit').prop('disabled', !$(this).val()); 
+});
+
+    });
+
+
+
+    //-----------------------------------------------------------------------------------------------
+
+    //create if statement to check that form has been filled out completely
+
+
+    //-----------------------------------------------------------------------------------------------
+
+
+
+    //button for parent to look up students
+    //text sent to mysql, return with data to display the table $('.behavTab').show()
+
+    $('.StuIdBtn').on('click', function (event) {
+
+      event.preventDefault();
+
+      console.log('clicked')
+
+      console.log(event)
+
+      var formVal = $('.idForm').val()
+
+      console.log(formVal)
+
+      $('.jumbotron').slideUp()
+
+      $('.behavTab').show()
+
+      $('.contactBtn').on('click', function(){
+
+        window.location.href='contact.html'
+        
+      })
+
+
+    })
+
+  </script>
+
+
+
+</body>
+
+</html>

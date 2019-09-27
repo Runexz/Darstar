@@ -1,3 +1,180 @@
-.list-group-item {
-  line-height: 2.5;
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+html{
+  background-color: #fff;
+  color: #000;
+  font-family: "lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+
+
+  /* scrolling */
+  /* overflow: hidden;
+  height: 100%; */
+
+
+  
+}
+
+/* body {
+  height: 100%;
+  overflow: auto;
+} */
+
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/teacher.png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+
+.header-parent{
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/student.png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  overflow: overlay;
+
+
+}
+
+.header-teacher{
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/bookpencils.png');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  overflow: overlay;
+
+}
+
+
+
+
+ 
+
+
+/*-------------------------------Middle text------------------*/
+
+
+
+.maintext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+}
+
+.text{
+
+  font-size: 80px;
+  font-family: 'Permanent Marker', cursive;
+  font-weight:500;
+  color: #fff;
+  font-size: 52px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+
+}
+
+
+
+.markerFont{
+
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.dancingScriptFont{
+
+  font-family: 'Dancing Script', cursive;
+
+}
+  
+
+  
+
+  
+
+
+/* BUTTONS */
+
+.btnHome:link,
+.btnHome:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-style:solid;
+    border-color: #e67e22;
+     border-radius: 200px;
+     transition: background-color 0.2s, border 0.2s, color 0.2s;
+       
+}
+
+
+.btnParent:link,
+.btnParent:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 20px;
+    padding: 50x;
+}
+
+.btnTeacher:link,
+.btnTeacher:visited {
+    color: #fff;
+    border: 1px solid #39d27a;
+    background-color: #39d27a
+}
+
+/* .btn:hover,
+.btn:active{
+    background-color: transparent;
+    color: #fff;
+    
+} */
+/* 
+
+
+.pico{
+  width: 10px
+}
+
+.teaBeLogTab{
+  margin-left: 50%;
+  margin-right: 50%;
+} */
+
+.behTabTitle{
+  font-size: 25px;
+}
+
+.behavColor{
+  background-color: blue;
+}
+
+.teachPic{
+  width: 140px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.contactFontLink{
+  color: white;
+  float: right;
 }

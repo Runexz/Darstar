@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" type="text/css" href="/public/styles/styles.css">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
+
+  <!-- font-awesome -->
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+
+  <!-- <title>Student Behavior Log</title> -->
+
+  <!-- <title>DarStar Behavior Tracker</title> -->
+
+  <title>Teacher - Record Input</title>
+
+</head>
+
+<body>
+
+
+
+
+  <section>
+
+    <div class="header-teacher">
+
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+        <a class="navbar-brand" href="index.html">DarStar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parent.html">Parent</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teacher.html">Teacher</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0 navSearch">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0 disabled" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+
+      <div class="container">
+
+        <!-- jumbotron -->
+
+        <div class="jumbotron mt-3">
+          <h1 class="display-4 text text-dark">DarStar!</h1>
+
+          <hr class="my-4">
+          <p>To begin, please enter the student's ID number below:</p>
+
+
+          <!-- student ID input -->
+          <form class="form-inline">
+
+            <div class="form-group mb-2">
+
+              <label for="inputPassword3" class="sr-only">Password</label>
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Student's ID">
+            </div>
+            <button type="submit" class="btn btn-primary teachStuIdBtn mb-2 ml-3">Find Student</button>
+          </form>
+
+
+        </div>
+
+        <!-- --------------------------------------------------------------------------------------- -->
+
+
+        <!-- get info from mySQL database to display name + etc -->
+
+        <!-- --------------------------------------------------------------------------------------- -->
+
+
+        <div class="card teaBeLogTab col-12 mt-3">
+          <h5 class="card-header">//student Name// + //iD//</h5>
+
+
+
+          <div class="card-body">
+
+
+            <table class="table bg-white ">
+              <thead class="thead-dark text-center">
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">Score</th>
+
+                </tr>
+              </thead>
+              <tbody class="text-center">
+                <tr>
+                  <th scope="row" class="text-left behTabTitle ">Perseverance</th>
+                  <td>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value=1>
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value=2>
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value=3>
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value=4>
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio5" value=5>
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+
+
+
+                  </td>
+
+                </tr>
+                <tr>
+                  <th scope="row" class="text-left behTabTitle">Leadership</th>
+                  <td>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value=1>
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value=2>
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value=3>
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio4" value=4>
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value=5>
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+
+
+
+                  </td>
+
+                </tr>
+                <tr>
+                  <th scope="row" class="text-left behTabTitle">Uplift</th>
+                  <td>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+                        value="1">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
+                        value="2">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3"
+                        value="3">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4"
+                        value="4">
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio5"
+                        value="5">
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+
+
+
+                  </td>
+
+                </tr>
+                <tr>
+                  <th scope="row" class="text-left behTabTitle">Scholarship</th>
+                  <td>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1"
+                        value="1">
+                      <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2"
+                        value="2">
+                      <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3"
+                        value="3">
+                      <label class="form-check-label" for="inlineRadio3">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4"
+                        value="4">
+                      <label class="form-check-label" for="inlineRadio4">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio5"
+                        value="5">
+                      <label class="form-check-label" for="inlineRadio5">5</label>
+                    </div>
+
+
+
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+
+
+            <div class="row">
+
+              <div class="col-12">
+
+                  <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
+                  placeholder="Leave a comment here"></textarea>
+
+
+              </div>
+
+               
+  
+  
+  
+  
+                <div class="col-4 mb-5">
+  
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01"
+                            aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+  
+                </div>
+  
+
+
+            </div>
+
+
+           
+
+
+
+
+
+
+
+
+
+            <button type="button" class="btn btn-primary teachBehavLog">Submit</button>
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="card teaBeLogTab mt-2">
+
+
+          <h5 class="card-header">Announcements</h5>
+          <div class="card-body">
+            <p>Hispanic Heritage Month program information will be sent out on Monday!</p>
+          </div>
+        </div>
+
+
+
+
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
+
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      console.log("document is ready!");
+      $('.teaBeLogTab').hide();
+
+    });
+
+
+    //-----------------------------------------------------------------------------------------------
+
+    //create if statement to check that form and comment have been filled out completely
+
+
+    //-----------------------------------------------------------------------------------------------
+
+
+    //button on-click for teacher to look up student
+
+    $('.teachStuIdBtn').on('click', function (event) {
+
+      event.preventDefault();
+
+      console.log('clicked to enter id btn');
+
+      console.log(event);
+
+
+
+      $('.jumbotron').hide();
+
+      $('.teaBeLogTab').show();
+
+    })
+
+    //button on-click for teacher submit behavior log
+
+
+    $('.teachBehavLog').on('click', function (event) {
+
+      event.preventDefault();
+
+      console.log('clicked behavior log btn');
+
+      console.log(event);
+
+      // $('.teaBeLogTab').show()
+
+
+
+      // collecting data input from teacher
+
+      var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
+      if (radioValue) {
+        console.log("perseverance: " + radioValue);
+      }
+
+      var radioValue2 = $("input[name='inlineRadioOptions3']:checked").val();
+      if (radioValue2) {
+        console.log("Leadership: " + radioValue2);
+      }
+
+      var radioValue3 = $("input[name='inlineRadioOptions2']:checked").val();
+      if (radioValue3) {
+        console.log("Uplift: " + radioValue3);
+      }
+      var radioValue4 = $("input[name='inlineRadioOptions1']:checked").val();
+      if (radioValue4) {
+        console.log("Scholarship: " + radioValue4);
+      }
+
+
+      var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + + parseInt(radioValue3) + + parseInt(radioValue4));
+
+
+      var teacherCommment = $('#teachComment').val();
+
+
+
+
+      console.log("teacher comment: " + teacherCommment)
+      console.log("total score: " + scoreTotal)
+
+
+      // action once data has been collected
+
+      var behaviorColor;
+
+      if (scoreTotal > 18 && scoreTotal <= 20) {
+
+
+        behaviorColor = 'blue';
+
+      } else if (scoreTotal > 16 && scoreTotal <= 18) {
+
+        behaviorColor = 'Green';
+
+      } else if (scoreTotal > 14 && scoreTotal <= 16) {
+
+        behaviorColor = 'Yellow';
+
+      } else if (scoreTotal >= 13 && scoreTotal <= 14) {
+
+        behaviorColor = 'Orange';
+
+      } else {
+
+        behaviorColor = 'Red';
+
+      }
+
+
+
+      console.log('color: ' + behaviorColor)
+
+
+
+
+
+    })
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>
