@@ -1,4 +1,4 @@
-CREATE TABLE Classroom
+CREATE TABLE Classrooms
 (
 	id int NOT NULL AUTO_INCREMENT,
 	studentid INTEGER NOT NULL,
