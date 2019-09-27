@@ -94,8 +94,8 @@ header{
 
 /* BUTTONS */
 
-.btn:link,
-.btn:visited{
+.btnHome:link,
+.btnHome:visited{
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -154,4 +154,9 @@ header{
   width: 140px;
   border-radius: 50%;
   margin: auto;
+}
+
+.contactFontLink{
+  color: white;
+  float: right;
 }
