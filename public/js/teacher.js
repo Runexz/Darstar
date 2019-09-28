@@ -30,7 +30,7 @@
 
         console.log('form is completed')
 
-        $('.jumbotron').hide();
+        
 
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -39,7 +39,20 @@
 
         /////////////////////////////////////////////////////////////////////////////////////
 
+       
+
+
+        // $('.parentLogAppend').text("Please enter the ID!")
+
+        var parFormVal = $('.parIdForm').val().trim("")
+
+        console.log('student ID input' + parFormVal)
+
+        $('.jumbotron').hide();
+
         $('.teaBeLogTab').show();
+
+    
 
 
 
@@ -143,9 +156,19 @@
       // collecting data input from teacher
       console.log('-----------------------------------------------------------------------------')
 
+      console.log('-----------------------------------------------------------------------------')
+
+      console.log('-----------------------------------------------------------------------------')
+
       console.log('DATA TO SEND TO MYSQL BELOW')
 
       console.log('-----------------------------------------------------------------------------')
+      var parFormVal = $('.parIdForm').val().trim("")
+
+      console.log("Student's ID: " + parFormVal)
+
+      console.log('-----------------------------------------------------------------------------')
+
 
       var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
       if (radioValue) {

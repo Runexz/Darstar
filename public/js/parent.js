@@ -9,9 +9,11 @@
 
 
     $(".contactFontLink").hover(function() {
-    // $(this).addCss("Contact Us!");
-    // $(this).text("Contact Us!");
-  });
+        // $(this).addCss("Contact Us!");
+        // $(this).text("Contact Us!");
+      });
+
+ 
     //-----------------------------------------------------------------------------------------------
 
     //create if statement to check that form has been filled out completely
@@ -39,7 +41,7 @@
 
         /////////////////////////////////////////////////////////////////////////////////////
 
-        $('.parentLogAppend').text("Please enter a comment!")
+        $('.parentLogAppend').text("Please enter the ID!")
 
         var formVal = $('.idForm').val()
 
