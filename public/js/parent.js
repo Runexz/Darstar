@@ -1,5 +1,4 @@
-    var API = require("./index");
-    $(document).ready(function () {
+   $(document).ready(function () {
       console.log("Doc is ready!");
       $('.behavTab').hide()
 
@@ -44,7 +43,6 @@
 
         var formVal = $('.idForm').val()
 
-        console.log(formVal)
 
         $('.jumbotron').slideUp()
 

@@ -1,5 +1,3 @@
-import { deepStrictEqual } from "assert";
-
 // Get references to page elements
 var stuNameID = $(".stuNameID");
 // var $exampleDescription = $("#example-description");
@@ -26,7 +24,7 @@ var API = {
   },
   getClassroomsbyId: function(id) {
     return $.ajax({
-      url: `api/classrooms/${id}`,
+      url: `/api/classrooms/${id}`,
       type: "GET"
     }).then (function(data) {
       // displayClassroom();
