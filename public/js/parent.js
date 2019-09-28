@@ -45,7 +45,7 @@
 
         console.log(formVal)
 
-        $('.jumbotron').slideUp()
+        $('.jumbotron').slideUp()-
 
         $('.behavTab').show()
 

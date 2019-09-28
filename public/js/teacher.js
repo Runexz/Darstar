@@ -94,7 +94,7 @@
 
           console.log('not selected')
 
-          $('.textCheckForm').text('Please complete the tracker above!')
+          $('.textCheckForm').text('Please complete the entire form above!')
 
 
         }
