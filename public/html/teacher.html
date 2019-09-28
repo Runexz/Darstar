@@ -520,10 +520,10 @@
 
       } else {
 
-        console.log('form is completed 2')
+        console.log('form 2 is completed ')
 
 
-        console.log('ready to submit 2')
+        // console.log('ready to submit 2')
 
 
       }
@@ -533,6 +533,8 @@
 
 
       // collecting data input from teacher
+
+      console.log('-----------------------------------------------------------------------------')
 
       var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
       if (radioValue) {
@@ -553,6 +555,8 @@
         console.log("Scholarship: " + radioValue4);
       }
 
+      console.log('-----------------------------------------------------------------------------')
+
 
       var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + + parseInt(radioValue3) + + parseInt(radioValue4));
 
@@ -565,7 +569,12 @@
       console.log("teacher comment: " + teacherCommment)
       console.log("total score: " + scoreTotal)
 
+      console.log('-----------------------------------------------------------------------------')
 
+      
+      console.log('missing work: ')
+
+      console.log('-----------------------------------------------------------------------------')
       // action once data has been collected
 
       var behaviorColor;
