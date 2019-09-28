@@ -1,61 +1,63 @@
+import { deepStrictEqual } from "assert";
+
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var stuNameID = $(".stuNameID");
+// var $exampleDescription = $("#example-description");
+// var $submitBtn = $("#submit");
+// var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveClassrooms: function(classroom) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/classrooms",
+      data: JSON.stringify(classroom)
     });
   },
-  getExamples: function() {
+  getClassrooms: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "api/classrooms",
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  getClassroomsbyId: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: `api/classrooms/${id}`,
+      type: "GET"
+    }).then (function(data) {
+      // displayClassroom();
+      console.log(data)
+    });
+  },
+  deleteClassroms: function(id) {
+    return $.ajax({
+      url: "api/classrooms/" + id,
       type: "DELETE"
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
 
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
 
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
+function displayClassrooms() {
+  var classroomsList = API.getClassrooms();
+  for (i=0; i< classroomsList.length; i++) {
+    displayClassrooms(classroomsList[i]);
+  }
+}
 
-      $li.append($button);
 
-      return $li;
-    });
+var displayStuId = function(id) {
+  var classroomInfo = API.getClassroombyId(studentid);
+  $('.pilFour').text = classroomInfo.pillar4;
+}
+var displayClassroom = function(data) {
+  $('.pilFour').text = data.pillar4;
+}
 
-    $exampleList.empty();
-    $exampleList.append($examples);
-  });
-};
+
 

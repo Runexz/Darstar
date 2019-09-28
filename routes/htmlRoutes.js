@@ -1,17 +1,26 @@
+var path = require("path");
 var db = require("../models");
+
 
 module.exports = function (app) {
   // Load index page
-  app.get("/", function (req, res) {
-    db.Classroom.findAll({}).then(function (dbClassroom) {
-      res.json(dbClassroom);
-    });
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
-  // Load example page and pass in an example by id
-  app.get("/Classroom/:id", function (req, res) {
-    db.Classroom.findOne({ where: { id: req.params.id } }).then(function (dbClassroom) {
-      res.json(dbClassroom)
-    });
+  app.get("/parent.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/parent.html"));
+  });
+
+  app.get("/teacher.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/teacher.html"));
+  });
+
+  app.get("/contact.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/contact.html"));
+  });
+
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 };
