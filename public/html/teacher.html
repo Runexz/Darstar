@@ -473,10 +473,17 @@
         console.log(radioFour)
 
 
+        
+      
+
+      var textboxOne = $("#teachComment").val().trim().length ;
+      console.log("boxlength is: " + textboxOne)
 
 
 
-        if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1) {
+
+
+        if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1 && textboxOne >=2) {
 
           console.log('true')
 
@@ -504,6 +511,9 @@
 
 
     $('.teachBehavLog').on('click', function (event) {
+
+
+      
 
 
       var textbox = $("#teachComment");
