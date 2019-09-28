@@ -211,6 +211,7 @@
 
 
         <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x"></i></a>
+        <P class="hoverContact"></P>
 
 
 
@@ -240,7 +241,10 @@
 
 
 
-
+    $(".contactFontLink").hover(function() {
+    // $(this).addCss("Contact Us!");
+    // $(this).text("Contact Us!");
+  });
     //-----------------------------------------------------------------------------------------------
 
     //create if statement to check that form has been filled out completely
