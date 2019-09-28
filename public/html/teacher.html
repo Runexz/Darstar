@@ -15,9 +15,11 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
 
+
+
   <!-- font-awesome -->
 
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -39,7 +41,7 @@
     <div class="header-teacher">
 
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+      <nav class="navbar navbaro sticky-top navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <a class="navbar-brand" href="index.html">DarStar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +83,7 @@
 
 
           <!-- student ID input -->
-          <form class="form-inline">
+          <form id="form" action="" method="post" class="form-inline">
 
             <div class="form-group mb-2">
 
@@ -90,6 +92,8 @@
             </div>
             <button type="submit" class="btn btn-primary teachStuIdBtn mb-2 ml-3">Find Student</button>
           </form>
+
+          <span class="teacherLogAppend"></span>
 
 
         </div>
@@ -249,52 +253,107 @@
                   </td>
 
                 </tr>
+
+                <tr></tr>
+                <th scope="row" class="text-left behTabTitle"></th>
+                <td></td>
+
+
               </tbody>
             </table>
+
+            <form>
+
+              <fieldset class="form-group" id="formWork">
+                <div class="row">
+                  <legend class="col-form-label col-8 pt-0">Is the student missing any work?</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="No"
+                        checked>
+                      <label class="form-check-label" for="gridRadios1">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Yes">
+                      <label class="form-check-label" for="gridRadios2">
+                        Yes
+                      </label>
+                    </div> 
+
+                  </div>
+                </div>
+              </fieldset>
+
+
+            </form>
+            <tbody>
+
+              <tr></tr>
+              <th scope="row" class="text-left behTabTitle"></th>
+              <td></td>
+
+
+
+            </tbody>
+
+
+
 
 
             <div class="row">
 
+              <div class="col-5 mb-5">
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text text-light bg-dark" id="inputGroupFileAddon01">Upload</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label text-primary" for="inputGroupFile01">Choose file</label>
+                  </div>
+                </div>
+
+              </div>
+
+              <span class="textCheckForm text text-danger"></span>
+
+
+
               <div class="col-12">
 
-                  <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
-                  placeholder="Leave a comment here"></textarea>
+
+                <form id="teaComBox" action="" method="POST" class="form-inline  mt-1 mb-3">
+
+                  <div class="form-group mb-2">
+
+                    <label for="teachComment" class="sr-only">Comment:</label>
+
+                    <textarea name="commentBox" id="teachComment" cols="60" class="d-block"
+                      placeholder="Leave a comment here..."></textarea>
+
+                    <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
+
+                  </div>
+
+                </form>
 
 
               </div>
 
-               
-  
-  
-  
-  
-                <div class="col-4 mb-5">
-  
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            aria-describedby="inputGroupFileAddon01">
-                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
-                      </div>
-  
-                </div>
-  
+
+
+
+
+
+
+
 
 
             </div>
-
-
-           
-
-
-
-
-
-
 
 
 
@@ -309,11 +368,11 @@
 
         </div>
 
-        <div class="card teaBeLogTab mt-2">
+        <div class="card teaBeLogTab mt-2 mb-5">
 
 
           <h5 class="card-header">Announcements</h5>
-          <div class="card-body">
+          <div class="card-body ">
             <p>Hispanic Heritage Month program information will be sent out on Monday!</p>
           </div>
         </div>
@@ -356,40 +415,128 @@
     //-----------------------------------------------------------------------------------------------
 
 
-    //button on-click for teacher to look up student
-
-    $('.teachStuIdBtn').on('click', function (event) {
-
-      event.preventDefault();
-
-      console.log('clicked to enter id btn');
-
-      console.log(event);
 
 
 
-      $('.jumbotron').hide();
 
-      $('.teaBeLogTab').show();
+    $("#form").submit(function (event) {
+      var textarea = $("#inputPassword3");
+      if (textarea.val().trim() === "") {
+        // No message, add red highlighting to indicate error
+        textarea.css("box-shadow", "0 0 12px #811");
+        $('.teacherLogAppend').text("Please enter the student's ID")
+        event.preventDefault();
 
-    })
+      } else {
 
-    //button on-click for teacher submit behavior log
+        console.log('form is completed')
+
+        $('.jumbotron').hide();
+
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        //display result of id search here ---- place to call ajax to call api for mysql
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        $('.teaBeLogTab').show();
+
+
+
+        event.preventDefault();
+
+
+      }
+    });
+
+    disableBtn()
+
+
+
+
+
+    function disableBtn() {
+
+      $(".teachBehavLog").attr("disabled", true)
+
+      $("#teachComment").on('click', function () {
+
+        var radioOne = $("input[name='inlineRadioOptions4']:checked").val()
+        var radioTwo = $("input[name='inlineRadioOptions3']:checked").val()
+        var radioThree = $("input[name='inlineRadioOptions2']:checked").val()
+        var radioFour = $("input[name='inlineRadioOptions1']:checked").val()
+
+        console.log(radioOne)
+        console.log(radioTwo)
+        console.log(radioThree)
+        console.log(radioFour)
+
+
+
+
+
+        if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1) {
+
+          console.log('true')
+
+          $(".teachBehavLog").attr("disabled", false);
+
+
+
+        } else {
+
+          console.log('not selected')
+
+          $('.textCheckForm').text('Please complete the tracker above!')
+
+
+        }
+
+      })
+    }
+
+
+
+
+
+    // button on-click for teacher submit behavior log
 
 
     $('.teachBehavLog').on('click', function (event) {
 
-      event.preventDefault();
 
-      console.log('clicked behavior log btn');
+      var textbox = $("#teachComment");
+      if (textbox.val().trim() === "") {
 
-      console.log(event);
+        event.preventDefault();
+        // No message, add red highlighting to indicate error
+        textbox.css("box-shadow", "0 0 12px #811");
 
-      // $('.teaBeLogTab').show()
+        console.log('clicked behavior log btn');
+
+
+
+      } else {
+
+        console.log('form 2 is completed ')
+
+
+        // console.log('ready to submit 2')
+
+
+      }
+
+
 
 
 
       // collecting data input from teacher
+      console.log('-----------------------------------------------------------------------------')
+
+      console.log('DATA TO SEND TO MYSQL BELOW')
+
+      console.log('-----------------------------------------------------------------------------')
 
       var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
       if (radioValue) {
@@ -410,18 +557,29 @@
         console.log("Scholarship: " + radioValue4);
       }
 
+      console.log('-----------------------------------------------------------------------------')
 
-      var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + + parseInt(radioValue3) + + parseInt(radioValue4));
+
+      var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + parseInt(radioValue3) + parseInt(radioValue4));
 
 
       var teacherCommment = $('#teachComment').val();
 
-
-
-
       console.log("teacher comment: " + teacherCommment)
-      console.log("total score: " + scoreTotal)
 
+
+
+
+      console.log('-----------------------------------------------------------------------------')
+
+      var isHwChecked = $("#formWork input[type='radio']:checked").val();
+      // console.log(isHwChecked)
+
+      console.log('missing work: ' + isHwChecked)
+
+      console.log('-----------------------------------------------------------------------------')
+
+      console.log("total score: " + scoreTotal)
 
       // action once data has been collected
 
@@ -455,7 +613,11 @@
       console.log('color: ' + behaviorColor)
 
 
+      
 
+
+console.log('-------------------------------------------------')
+      
 
 
     })

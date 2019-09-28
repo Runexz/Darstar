@@ -14,13 +14,13 @@
 
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
-  
-  
+
+
   <!-- font-awesome -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
+
 
 
   <title>Student Behavior Log</title>
@@ -40,7 +40,7 @@
 
     <div class="header-parent">
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <nav class="navbar navbaro sticky-top navbar-expand-lg navbar-dark bg-dark mb-5">
         <a class="navbar-brand" href="index.html">DarStar!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,28 +76,42 @@
 
         <div class="jumbotron">
           <h1 class="display-4 text text-dark">DarStar!</h1>
-          
+
           <hr class="my-4">
 
-          <p class="lead mt-3 mb-2">The easiest way for you to track your student's behavior and staying in contact with
-              their teachers!</p>
+          <p class="lead mt-3 mb-4">The easiest way for you to track your student's behavior and staying in contact with
+            their teachers!</p>
 
           <!-- <p>To begin, please enter your student's ID number below:</p> -->
 
 
           <!-- student ID input -->
-          <form action="#" method="post" class="form-inline ">
+
+
+
+
+          
+
+          <form id="formParent" action="" method="post" class="form-inline">
 
             <div class="form-group mb-2">
 
               <label for="inputPassword2" class="sr-only">Password</label>
               <input type="password" class="form-control idForm" id="inputPassword2" placeholder="Student's ID">
             </div>
-            <input type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3"></input>
+            <button type="submit" class="btn btn-primary StuIdBtn mb-2 ml-3">Find Student</button>
           </form>
-
+          <span class="parentLogAppend"></span>
 
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -106,18 +120,24 @@
           <!-- --------------------------------------------------------------------------------------- -->
 
           <!-- student name and Id to be pulled from mysql database -->
-
-          
-        <!-- --------------------------------------------------------------------------------------- -->
+          <!-- use ajax and api -->
 
 
+          <!-- --------------------------------------------------------------------------------------- -->
 
-          <h5 class="card-header stuNameID">//student Name// + //iD//</h5>
+
+
+          <h5 class="card-header stuNameID">//student Name// + ~br~ + //iD//</h5>
           <div class="card-body">
 
             <!-- first box in scoreboard display -->
             <div class="row">
-              
+
+
+
+
+              <!-- all classes to append data are below -->
+              <!-- student name and id will go above -->
 
 
               <!-- second box in scoreboard display -->
@@ -136,24 +156,31 @@
                       <tbody>
                         <tr>
                           <th scope="row">Perseverance</th>
-                          <td>----</td>
+                          <td class="pilOne">----</td>
 
                         </tr>
                         <tr>
                           <th scope="row">Leadership</th>
-                          <td>----</td>
+                          <td class="pilTwo">----</td>
 
                         </tr>
                         <tr>
                           <th scope="row">Uplift</th>
-                          <td>----</td>
+                          <td class="pilThree">----</td>
 
                         </tr>
                         <tr>
                           <th scope="row">Scholarship</th>
-                          <td>----</td>
+                          <td class="pilFour">----</td>
 
                         </tr>
+                        <tr class="bg-dark text-white">
+                            <th scope="row">Missing Work:</th>
+                            <td class="pilFive">----</td>
+  
+                          </tr>
+
+                        
                       </tbody>
                     </table>
 
@@ -168,37 +195,38 @@
               <div class="col-sm-6 behavColor">
 
 
-                  <div class="colorWritten">
-                    <p class="text-center colorNameDisplay">color placeholder</p>
-                    <p class="text-center colorNameDisplay">color to be updated upon receipt of number</p>
-                  </div>
-  
+                <div class="colorWritten">
+                  <p class="text-center colorNameDisplay">color placeholder</p>
+                  <p class="text-center colorNameDisplay">color to be updated upon receipt of of dat from mysql</p>
                 </div>
+
+              </div>
 
 
             </div>
 
-          
+
 
 
 
           </div>
         </div>
 
-        
+
         <div class="card behavTab mt-3">
 
 
-            <h5 class="card-header">Teacher's comment:</h5>
+          <h5 class="card-header">Teacher's comment:</h5>
           <div class="card-body">
             <p class="comToPost">-----</p>
           </div>
         </div>
 
 
-        <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x" ></i></a>
+        <a href="/public/html/contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x"></i></a>
+        <P class="hoverContact"></P>
 
-    
+
 
       </div>
 
@@ -221,50 +249,60 @@
       console.log("Doc is ready!");
       $('.behavTab').hide()
 
-      $('input:file').on("change", function() {
-    $('input:submit').prop('disabled', !$(this).val()); 
-});
 
     });
 
 
 
+    $(".contactFontLink").hover(function() {
+    // $(this).addCss("Contact Us!");
+    // $(this).text("Contact Us!");
+  });
     //-----------------------------------------------------------------------------------------------
 
     //create if statement to check that form has been filled out completely
 
 
     //-----------------------------------------------------------------------------------------------
+    $("#formParent").submit(function (event) {
+      var textar = $("#inputPassword2");
+      if (textar.val().trim() === "") {
+        // No message, add red highlighting to indicate error
+        textar.css("box-shadow", "0 0 12px #811");
+        $('.parentLogAppend').text("Please enter the student's ID")
+        $('.parentLogAppend').slideDown()
+        event.preventDefault();
+
+      } else {
+
+        console.log('form is completed')
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        //display result of id search here ---- 
+        //place to call ajax to call api for mysql: pull all data then we can push to specific div
+        //
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        $('.parentLogAppend').text("Please enter a comment!")
+
+        var formVal = $('.idForm').val()
+
+        console.log(formVal)
+
+        $('.jumbotron').slideUp()
+
+        $('.behavTab').show()
 
 
-
-    //button for parent to look up students
-    //text sent to mysql, return with data to display the table $('.behavTab').show()
-
-    $('.StuIdBtn').on('click', function (event) {
-
-      event.preventDefault();
-
-      console.log('clicked')
-
-      console.log(event)
-
-      var formVal = $('.idForm').val()
-
-      console.log(formVal)
-
-      $('.jumbotron').slideUp()
-
-      $('.behavTab').show()
-
-      $('.contactBtn').on('click', function(){
-
-        window.location.href='contact.html'
-        
-      })
+        event.preventDefault();
 
 
-    })
+      }
+    });
+
+
 
   </script>
 
