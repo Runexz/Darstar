@@ -15,8 +15,8 @@
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
 
- 
-  
+
+
   <!-- font-awesome -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -83,7 +83,7 @@
 
 
           <!-- student ID input -->
-          <form id="form" action="" class="form-inline">
+          <form id="form" action="" method="post" class="form-inline">
 
             <div class="form-group mb-2">
 
@@ -92,6 +92,8 @@
             </div>
             <button type="submit" class="btn btn-primary teachStuIdBtn mb-2 ml-3">Find Student</button>
           </form>
+
+          <span class="teacherLogAppend"></span>
 
 
         </div>
@@ -251,47 +253,65 @@
                   </td>
 
                 </tr>
+
+                <tr></tr>
+                <th scope="row" class="text-left behTabTitle"></th>
+                <td></td>
+
+
               </tbody>
             </table>
+
+            <span class="textCheckForm text text-danger"></span>
 
 
             <div class="row">
 
               <div class="col-12">
 
-                  <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
-                  placeholder="Leave a comment here"></textarea>
+
+               
+
+
+
+
+                <form id="teaComBox" action="" method="post" class="form-inline">
+
+                  <div class="form-group mb-2">
+
+                    <label for="inputtext" class="sr-only">Comment:</label>
+                    <textarea name="commentBox" id="teachComment" cols="60" class="d-block mb-3"
+                      placeholder="Leave a comment here..."></textarea>
+                  </div>
+
+                </form>
 
 
               </div>
 
-               
-  
-  
-  
-  
-                <div class="col-6 mb-5">
-  
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-                        </div>
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputGroupFile01"
-                            aria-describedby="inputGroupFileAddon01">
-                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-                        </div>
-                      </div>
-  
+
+
+
+
+
+              <div class="col-5 mb-5">
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text text-light bg-dark" id="inputGroupFileAddon01">Upload</span>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label " for="inputGroupFile01">Choose file</label>
+                  </div>
                 </div>
-  
+
+              </div>
+
 
 
             </div>
-
-
-    
-
 
 
 
@@ -354,44 +374,119 @@
 
 
 
-    $("#form").submit(function(event) {
-    var textarea = $("#inputPassword3");
-    if (textarea.val().trim() === "") {
-      // No message, add red highlighting to indicate error
-      textarea.css("box-shadow", "0 0 4px #811");
 
-      // The default event now would be to submit the form. The browser will do
-      // this automatically when clicking a submit button. We prevent this using
-      // preventDefault(). This way, the form will not be submitted.
-      event.preventDefault();
-    } else {
-      // Nothing to do, let the form be submitted.
 
-      console.log('ready to submit')
 
-      $('.jumbotron').hide();
 
-      $('.teaBeLogTab').show();
-      event.preventDefault();
+    $("#form").submit(function (event) {
+      var textarea = $("#inputPassword3");
+      if (textarea.val().trim() === "") {
+        // No message, add red highlighting to indicate error
+        textarea.css("box-shadow", "0 0 12px #811");
+        $('.teacherLogAppend').text("Please enter the student's ID")
+        event.preventDefault();
+
+      } else {
+
+        console.log('form is completed')
+
+        $('.jumbotron').hide();
+
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        //display result of id search here ---- place to call ajax to call api for mysql
+
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        $('.teaBeLogTab').show();
+
+
+
+        event.preventDefault();
+
+
+      }
+    });
+
+    disableBtn()
+
+
+
+
+
+    function disableBtn() {
+
+      $(".teachBehavLog").attr("disabled", true)
+
+      $("#teachComment").on('click', function () {
+
+        var radioOne = $("input[name='inlineRadioOptions4']:checked").val()
+        var radioTwo = $("input[name='inlineRadioOptions3']:checked").val()
+        var radioThree = $("input[name='inlineRadioOptions2']:checked").val()
+        var radioFour = $("input[name='inlineRadioOptions1']:checked").val()
+
+        console.log(radioOne)
+        console.log(radioTwo)
+        console.log(radioThree)
+        console.log(radioFour)
+
+
+
+
+
+        if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1) {
+
+          console.log('true')
+
+          $(".teachBehavLog").attr("disabled", false);
+
+
+
+        } else {
+
+          console.log('not selected')
+
+          $('.textCheckForm').text('Please complete the score board above!')
+
+
+        }
+
+      })
     }
-  });
 
 
 
 
 
-    //button on-click for teacher submit behavior log
+    // button on-click for teacher submit behavior log
 
 
     $('.teachBehavLog').on('click', function (event) {
 
-      event.preventDefault();
 
-      console.log('clicked behavior log btn');
+      var textbox = $("#teachComment");
+      if (textbox.val().trim() === "") {
 
-      console.log(event);
+        event.preventDefault();
+        // No message, add red highlighting to indicate error
+        textbox.css("box-shadow", "0 0 12px #811");
 
-      // $('.teaBeLogTab').show()
+        console.log('clicked behavior log btn');
+
+
+
+      } else {
+
+        console.log('form is completed 2')
+
+
+        console.log('ready to submit 2')
+
+
+      }
+
+
 
 
 
