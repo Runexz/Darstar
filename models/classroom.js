@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Classroom = sequelize.define("Classroom", {
+  return sequelize.define("Classrooms", {
     studentid: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -64,5 +64,4 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
   });
-  return Classroom;
 };

@@ -1,5 +1,4 @@
-
-    $(document).ready(function () {
+   $(document).ready(function () {
       console.log("Doc is ready!");
       $('.behavTab').hide()
 
@@ -20,6 +19,7 @@
     //-----------------------------------------------------------------------------------------------
     $("#formParent").submit(function (event) {
       var textar = $("#inputPassword2");
+      var studentId = parseInt(textar.val().trim());
       if (textar.val().trim() === "") {
         // No message, add red highlighting to indicate error
         textar.css("box-shadow", "0 0 12px #811");
@@ -28,7 +28,7 @@
         event.preventDefault();
 
       } else {
-
+        API.getClassroomsbyId(studentId)
         console.log('form is completed')
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,6 @@
 
         var formVal = $('.idForm').val()
 
-        console.log(formVal)
 
         $('.jumbotron').slideUp()
 

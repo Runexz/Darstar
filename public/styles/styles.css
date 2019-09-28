@@ -31,7 +31,7 @@ html{
 } */
 
 header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/teacher.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('../images/teacher.png');
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -39,7 +39,7 @@ header{
 
 .header-parent{
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/student.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('../images/student.png');
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -50,7 +50,7 @@ header{
 
 .header-teacher{
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('/public/images/bookpencils.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.562)), url('../images/bookpencils.png');
   background-size: cover;
   height: 100vh;
   background-position: center;
