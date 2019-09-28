@@ -264,7 +264,7 @@
 
             <form>
 
-              <fieldset class="form-group">
+              <fieldset class="form-group" id="formWork">
                 <div class="row">
                   <legend class="col-form-label col-8 pt-0">Is the student missing any work?</legend>
                   <div class="col-sm-10">
@@ -280,7 +280,7 @@
                       <label class="form-check-label" for="gridRadios2">
                         Yes
                       </label>
-                    </div>
+                    </div> 
 
                   </div>
                 </div>
@@ -301,7 +301,7 @@
 
 
 
-            
+
             <div class="row">
 
               <div class="col-5 mb-5">
@@ -326,7 +326,7 @@
               <div class="col-12">
 
 
-                <form id="teaComBox" action="" method="post" class="form-inline  mt-1 mb-3">
+                <form id="teaComBox" action="" method="POST" class="form-inline  mt-1 mb-3">
 
                   <div class="form-group mb-2">
 
@@ -413,7 +413,6 @@
 
 
     //-----------------------------------------------------------------------------------------------
-
 
 
 
@@ -561,20 +560,22 @@
       console.log('-----------------------------------------------------------------------------')
 
 
-      var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + + parseInt(radioValue3) + + parseInt(radioValue4));
+      var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + parseInt(radioValue3) + parseInt(radioValue4));
 
 
       var teacherCommment = $('#teachComment').val();
 
-
-
-
       console.log("teacher comment: " + teacherCommment)
+
+
+
 
       console.log('-----------------------------------------------------------------------------')
 
+      var isHwChecked = $("#formWork input[type='radio']:checked").val();
+      // console.log(isHwChecked)
 
-      console.log('missing work: ')
+      console.log('missing work: ' + isHwChecked)
 
       console.log('-----------------------------------------------------------------------------')
 
@@ -612,7 +613,11 @@
       console.log('color: ' + behaviorColor)
 
 
+      
 
+
+console.log('-------------------------------------------------')
+      
 
 
     })
