@@ -7,8 +7,8 @@ $(document).ready(function () {
 
   $('.parAncmnt').hide()
   $('.parCalend').hide()
-  // $('.parTabThree').hide()
-  // $('.parTabFour').hide()
+  $('.parAttendGrade').hide()
+  $('.parWeather').hide()
 
 
 });
@@ -25,7 +25,42 @@ $('.parTabTwo').on('click', function(){
   $('.parCalend').toggle()
 
 
-})
+});
+
+$('.parTabThree').on('click', function(){
+  $('.parAttendGrade').toggle()
+
+
+});
+$('.parTabFour').on('click', function(){
+  $('.parWeather').toggle()
+
+
+});
+
+
+
+
+$('.powerschoolLink').on('click', function(e){
+  e.preventDefault();
+  window.open('https://www.powerschool.com/sign-in/', '_blank')
+
+
+});
+
+
+
+
+
+$('.backBtn').on('click', function(){
+  $('.parAncmnt').hide()
+  $('.parCalend').hide()
+  $('.parAttendGrade').hide()
+  $('.parWeather').hide()
+
+
+});
+
 
 
 
