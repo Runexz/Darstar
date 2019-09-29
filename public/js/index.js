@@ -1,4 +1,4 @@
-// Get references to page elements
+// Get references to parent.html page elements
 var stuNameID = $(".stuNameID");
 var pillarOne = $(".pilOne");
 var pillarTwo = $(".pilTwo");
@@ -6,6 +6,12 @@ var pillarThree = $(".pilThree");
 var pillarFour = $(".pilFour");
 var missingWork = $(".pilFive");
 var teacherComment = $(".comToPost");
+
+// Get references to teacher.html page elements
+var teacherStuName = $(".studentName");
+var teacherStuId = $(".studentId");
+
+
 
 
 // function studentHeader() {
@@ -25,7 +31,7 @@ var teacherComment = $(".comToPost");
 // }
 
 
-// The API object contains methods for each kind of request we'll make
+// The API object contains methods for each kind of request we'll make (have not tried)
 var API = {
   saveClassrooms: function (classroom) {
     return $.ajax({
@@ -37,12 +43,38 @@ var API = {
       data: JSON.stringify(classroom)
     });
   },
-  getClassrooms: function () {
+  // This function is ran when teacher enters student new info to update current student info (DOES NOT WORK)
+  updateStudentbyId: function (id) {
     return $.ajax({
-      url: "api/classrooms",
-      type: "GET"
+      headers: {
+        "Content-Type": "application/json"
+      },
+      type: "PUT",
+      url: `api/classrooms/${id}`,
+      data: JSON.stringify(classroom)
+    }).then(function (data) {
+      console.log(data);
+      // data.pillar1 = radioValue;
+      // data.pillar2 = radioValue2;
+      // data.pillar3 = radioValue3;
+      // data.pillar4 = radioValue4;
+      // data.color = behaviorColor;
+      // data.descriptioncomments = teacherCommment;
+      // data.missingwork = isHwChecked;
     });
   },
+  // This function is ran when teacher enters id number (WORKS)
+  getStudentbyId: function (id) {
+    return $.ajax({
+      url: `api/classrooms/${id}`,
+      type: "GET"
+    }).then(function (data) {
+      teacherStuName.append("Student Name: " + data.name);
+      teacherStuId.append("Student Id: " + data.studentid)
+      console.log("Student Name: " + data.name + "Student Id: " + data.studentid);
+    });
+  },
+  // This function is ran when parent enters id number(WORKS)
   getClassroomsbyId: function (id) {
     return $.ajax({
       url: `/api/classrooms/${id}`,
@@ -85,6 +117,7 @@ var API = {
 
     });
   },
+  // (HAVE NOT TRIED)
   deleteClassroms: function (id) {
     return $.ajax({
       url: "api/classrooms/" + id,
