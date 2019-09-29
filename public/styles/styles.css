@@ -96,6 +96,19 @@ header{
 
 }
 
+.textCheckForm{
+
+  font-size: 25px;
+  /* font-family: 'Permanent Marker', cursive; */
+  font-weight:300; 
+ 
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+
+
+}
+
 
 
 .markerFont{
