@@ -112,6 +112,7 @@ function disableBtn() {
 $('.teachBehavLog').on('click', function (event) {
 
 
+ 
 
 
 
@@ -143,9 +144,19 @@ $('.teachBehavLog').on('click', function (event) {
   // collecting data input from teacher
   console.log('-----------------------------------------------------------------------------')
 
+  console.log('-----------------------------------------------------------------------------')
+
   console.log('DATA TO SEND TO MYSQL BELOW')
 
   console.log('-----------------------------------------------------------------------------')
+  console.log('-----------------------------------------------------------------------------')
+
+
+  var stuIdTeacLog = $('#inputPassword3').val().trim('');
+  console.log("student ID for teacher log-in: " + stuIdTeacLog);
+
+  console.log('-----------------------------------------------------------------------------')
+
 
   var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
   if (radioValue) {

@@ -184,7 +184,7 @@ header{
 }
 
 .behavColor{
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .teachPic{
@@ -196,4 +196,24 @@ header{
 .contactFontLink{
   color: white;
   float: right;
+}
+
+.parCalend{
+  width: 1000px;
+  margin: auto;
+  overflow: hidden;
+
+   
+}
+
+.cardColor{
+  background-color: rgb(233,236,239)
+}
+
+
+.powerschoolImg{
+
+  max-width: 200px;
+  margin: auto;
+  overflow: hidden;
 }
