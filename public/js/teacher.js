@@ -20,17 +20,19 @@
 
     $("#form").submit(function (event) {
       var textarea = $("#inputPassword3");
+      var studentIdTeacher = parseInt(textarea.val().trim());
       if (textarea.val().trim() === "") {
         // No message, add red highlighting to indicate error
         textarea.css("box-shadow", "0 0 12px #811");
         $('.teacherLogAppend').text("Please enter the student's ID")
+        $('.teacherLogAppend').slideDown()
         event.preventDefault();
 
       } else {
-
+        API.getStudentbyId(studentIdTeacher);
         console.log('form is completed')
 
-        $('.jumbotron').hide();
+        $('.jumbotron').slideUp();
 
 
         /////////////////////////////////////////////////////////////////////////////////////
@@ -111,8 +113,9 @@
 
     $('.teachBehavLog').on('click', function (event) {
 
-
-      
+      //store studentID number into a variable then parseint that will be used later
+      var textStudentId =  $(".studentId").val().trim();
+      var studentInfoUpdate = parseInt(textStudentId);
 
 
       var textbox = $("#teachComment");
@@ -147,6 +150,7 @@
 
       console.log('-----------------------------------------------------------------------------')
 
+      
       var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
       if (radioValue) {
         console.log("perseverance: " + radioValue);
@@ -226,8 +230,29 @@
 
 
 console.log('-------------------------------------------------')
-      
+      // var classroom = {};
 
+      // classroom.pillar1 = radioValue;
+      // classroom.pillar2 = radioValue2;
+      // classroom.pillar3 = radioValue3;
+      // classroom.pillar4 = radioValue4;
+      // classroom.color = behaviorColor;
+      // classroom.descriptioncomments = teacherCommment;
+      // classroom.missingwork = isHwChecked;
+      // var classroomObj = JSON.stringify(classroom);
+      // $.ajax({
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   },
+      //   method: "PUT",
+      //   url: "api/classrooms/1",
+      //   data: classroomObj
+      // }).then(function (data) {
+      //   console.log(data);
+      // });
+
+      
+      // API.updateStudentbyId(studentInfoUpdate);
 
     })
 
