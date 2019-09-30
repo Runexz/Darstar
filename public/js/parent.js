@@ -1,4 +1,11 @@
+
+
 $(document).ready(function () {
+
+
+
+
+
   console.log("Doc is ready!");
   $('.behavTab').hide()
 
@@ -11,29 +18,67 @@ $(document).ready(function () {
   $('.parWeather').hide()
 
 
+
+
+  //moment JS 
+  var currTime = moment().format('llll');
+
+  console.log(currTime);
+
+  $('.dateMoment').text(currTime);
+
+
+
 });
 
 
-$('.parTabOne').on('click', function(){
+$('.parTabOne').on('click', function () {
   $('.parAncmnt').toggle()
 
+  $('.parCalend').hide()
+  $('.parAttendGrade').hide()
+  $('.parWeather').hide()
+
 
 });
 
 
-$('.parTabTwo').on('click', function(){
+$('.parTabTwo').on('click', function () {
   $('.parCalend').toggle()
+  $('.parAncmnt').hide()
+  $('.parAttendGrade').hide()
+  $('.parWeather').hide()
 
 
 });
 
-$('.parTabThree').on('click', function(){
+$('.parTabThree').on('click', function () {
   $('.parAttendGrade').toggle()
+  $('.parAncmnt').hide()
+  $('.parCalend').hide()
+  $('.parWeather').hide()
+
+
+  // $('html, body').animate({
+  //   scrollTop: $(".parAttendGrade").offset().top
+  // });
+
 
 
 });
-$('.parTabFour').on('click', function(){
+
+
+$('.parTabFour').on('click', function () {
   $('.parWeather').toggle()
+  $('.parAncmnt').hide()
+  $('.parCalend').hide()
+  $('.parAttendGrade').hide()
+
+
+
+
+
+
 
 
 });
@@ -41,7 +86,7 @@ $('.parTabFour').on('click', function(){
 
 
 
-$('.powerschoolLink').on('click', function(e){
+$('.powerschoolLink').on('click', function (e) {
   e.preventDefault();
   window.open('https://www.powerschool.com/sign-in/', '_blank')
 
@@ -52,14 +97,18 @@ $('.powerschoolLink').on('click', function(e){
 
 
 
-$('.backBtn').on('click', function(){
+$('.backBtn').on('click', function () {
   $('.parAncmnt').hide()
   $('.parCalend').hide()
   $('.parAttendGrade').hide()
   $('.parWeather').hide()
 
 
+
 });
+
+
+
 
 
 
@@ -103,8 +152,8 @@ $("#formParent").submit(function (event) {
 
     // var formVal = $('.idForm').val().trim()
 
-  //   var stuIdParLog = $('#inputPassword2').val().trim('');
-  // console.log("student ID for parent log-in: " + stuIdParLog);
+    //   var stuIdParLog = $('#inputPassword2').val().trim('');
+    // console.log("student ID for parent log-in: " + stuIdParLog);
 
 
     $('.jumbotron').slideUp()
@@ -119,23 +168,63 @@ $("#formParent").submit(function (event) {
 });
 
 
-// if(object.ColorFromMyQL = 'blue'){
 
-//   $('behavColor').addClass('bg-primary');
-
-// }else if(object.ColorFromMyQL = 'green'){
-//   $('behavColor').addClass('bg-success');
+// api to call openWeather
 
 
-// }else if(object.ColorFromMyQL = 'yellow'){
-//   $('behavColor').addClass('bg-warning');
+var APIkey = 'fb0ce6d825db30974bf096625bf170a2';
+var zipCode = '75206'
 
-// }else if(object.ColorFromMyQL = 'orange'){
-//   $('behavColor').addClass('bg-orange');
-
-// }else if(object.ColorFromMyQL = 'red'){
-//   $('behavColor').addClass('bg-danger');
-// }
+var queryURL = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zipCode + ',us&APPID=' + APIkey;
 
 
+$.ajax({
+  url: queryURL,
+  method: 'GET'
 
+}).then(function (weather) {
+
+
+  // city///////////////////////////////////////////////
+  console.log(weather)
+
+
+  var cityName = weather.name
+  console.log(cityName)
+
+
+})
+
+//api for time
+// var APIkeyTime = '';
+
+
+// var queryURL = 'https://world-clock.p.rapidapi.com/json/utc/now'
+
+
+// $.ajax({
+//   url: queryURL,
+//   method: 'GET'
+
+// }).then(function (timeNow) {
+
+
+//   // city///////////////////////////////////////////////
+//   console.log(timeNow)
+
+
+//   // var cityName = weather.name
+//   // console.log(cityName)
+
+
+// })
+
+//widget--------------------------------------------------------------------------------//
+
+window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 15, cityid: '4684888', appid: 'fb0ce6d825db30974bf096625bf170a2', units: 'imperial', containerid: 'openweathermap-widget-15', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
+//--------------------------------------------------------------------------------------------//
+
+// var moment = require("moment");
+// var currentDate = moment();
+
+// console.log(currentDate)

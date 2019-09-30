@@ -217,3 +217,22 @@ header{
   margin: auto;
   overflow: hidden;
 }
+
+.attenTab{
+  overflow: hidden;
+
+}
+
+.localNewsBtn {
+
+ 
+  background-color: rgb(254,194,66);
+  /* color: rgb(254,194,66); */
+}
+
+.caruno{
+  background-color: rgb(254,194,66);
+}
+
+/* 
+over tooltip */
