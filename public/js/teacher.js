@@ -112,7 +112,7 @@ function disableBtn() {
 $('.teachBehavLog').on('click', function (event) {
 
 
- 
+
 
 
 
@@ -237,6 +237,17 @@ $('.teachBehavLog').on('click', function (event) {
 
 
   console.log('-------------------------------------------------')
+
+
+
+})
+
+
+$('.adminPage').on('click', function () {
+  console.log('admin btn clicked');
+
+  window.open('../html/admin.html');
+
 
 
 

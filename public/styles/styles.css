@@ -234,5 +234,11 @@ header{
   background-color: rgb(254,194,66);
 }
 
+.adminPage{
+
+  float: right;
+  color: white;
+}
+
 /* 
 over tooltip */
