@@ -247,6 +247,7 @@ $('.adminPage').on('click', function () {
   console.log('admin btn clicked');
 
   window.open('../html/admin.html');
+  // window.load('../html/admin.html');
 
 
 

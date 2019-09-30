@@ -15,12 +15,10 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Permanent+Marker&display=swap" rel="stylesheet">
 
+    <!-- font aweomse -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- <title>Student Behavior Log</title> -->
 
-    <!-- <title>DarStar Behavior Tracker</title> -->
-
-    <!-- <title>Teacher - Record Input</title> -->
     <title>DarStar - Admin</title>
 
 </head>
@@ -61,8 +59,8 @@
 
     <div class="container">
 
-        <div class="jumbotron">
-            <h1 class="display-4 text text-dark">DarStar!</h1>
+        <div class="jumbotron jumboThree">
+            <h1 class="display-4 text">DarStar!</h1>
 
             <hr class="my-4">
 
@@ -92,70 +90,166 @@
 
         </div>
 
-        <div class="adminBody">
+        <div class="adminChoice">
 
-                <div class="card mb-3">
-                        <h2 class="card-header text-center markerFont bg-dark text-white">Announcements</h2>
+            <div class="row text-center">
+                <div class="col-lg-6 col-sm-12 parTabUno mb-3">
+                    <div class="card ">
                         <div class="card-body">
-            
-                            <div class="currDate mt-3 mb-3">
-                                <p>Date: <span class="currTime"></span> </p>
-                            </div>
-            
-                            <div class="adminAnnouncements">
-            
-                                <form id="adminComBox" action="" method="POST" class="form-block ">
-            
-                                    <div class="form-group mb-2">
-            
-                                        <label for="adminAnncmt" class="sr-only">Comment:</label>
-            
-                                        <textarea name="admincommentBox" id="adminAnncmt" cols="40" rows="10" class="d-block"
-                                            placeholder="Write your annoucements here..."></textarea>
-            
-            
-                                    </div>
 
-                                    <div class="col-lg-5 col-sm-12 mb-4 mt-4">
+                            <i class="fa fa-bullhorn fa-4x"></i>
+                            <p class="card-text markerFont">Announcements</p>
 
-                                            <div class="input-group">
-                                              <div class="input-group-prepend">
-                                                <span class="input-group-text text-light bg-dark" id="inputGroupFileAddon01">Upload</span>
-                                              </div>
-                                              <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile02"
-                                                  aria-describedby="inputGroupFileAddon02">
-                                                <label class="custom-file-label text-primary" for="inputGroupFile02">Choose file</label>
-                                              </div>
-                                            </div>
-                            
-                                          </div>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
 
-                                    <button type="button" class="d-block btn btn-primary adminCommentLogSub mt-3">Submit</button>
 
-            
-                                </form>
-                            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12 parTabDos mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Special title treatment</h5> -->
+                            <i class="fa fa-calendar fa-4x" aria-hidden="true"></i>
+                            <p class="card-text markerFont">Calendar</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="adminBodyOne">
+
+
+
+
+            <div class="card mb-3">
+                <h2 class="card-header text-center markerFont bg-dark text-white">Announcements</h2>
+                <div class="card-body">
+
+                    <div class="currDate mt-3 mb-3">
+                        <p>Date: <span class="currTime"></span> </p>
+                    </div>
+
+                    <div class="adminAnnouncements">
+
+                        <form id="adminComBox" action="" method="POST" class="form-block ">
+
+                            <div class="form-group mb-2">
+
+                                <label for="adminAnncmt" class="sr-only">Comment:</label>
+
+                                <textarea name="admincommentBox" id="adminAnncmt" cols="40" rows="10" class="d-block"
+                                    placeholder="Write your annoucements here..."></textarea>
+
+
+                            </div>
+
+                            <div class="col-lg-5 col-sm-12 mb-4 mt-4">
+
+                                <h5>Insert flyers here:</h5>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-dark"
+                                            id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile02"
+                                            aria-describedby="inputGroupFileAddon02">
+                                        <label class="custom-file-label text-primary" for="inputGroupFile02">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button type="button" class=" btn btn-primary adminCommentLogSub mt-3">Submit
+                                Announcements</button>
+
+
+                        </form>
                     </div>
 
 
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+        <div class="adminBodyTwo">
+
+            <div class="card mb-3">
+                <h2 class="card-header text-center markerFont bg-dark text-white">Calendar</h2>
+                <div class="card-body">
+
+
+
+                    <div class="adminCalendar">
+
+                        <form id="adminComBox" action="" method="POST" class="form-block ">
+
+
+                            <div class="col-lg-6 col-sm-12 mb-4 mt-4">
+
+                                    <p>Insert calendar here to display on the app</p>
+
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text text-light bg-dark"
+                                            id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile03"
+                                            aria-describedby="inputGroupFileAddon03">
+                                        <label class="custom-file-label text-primary" for="inputGroupFile03">Choose
+                                            file</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <button type="button" class="d-block btn btn-primary adminClendarSub mt-3">Submit
+                                Calendar</button>
+
+
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
         </div>
 
 
         <!-- input the staff pictures here and buton to display text area and submit button to link with text app -->
 
-        
+
     </div>
 
 

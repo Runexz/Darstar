@@ -240,5 +240,28 @@ header{
   color: white;
 }
 
+
 /* 
 over tooltip */
+
+.jumbo {
+  background-image: url("../images/whiteboard.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.jumboTwo {
+  background-image: url("../images/pen.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.jumboThree {
+  
+  background-image: linear-gradient(rgba(0, 0, 0, 0.432), rgba(0, 0, 0, 0.432)), url("../images/pencil.png");
+  background-size: cover;
+  /* height: 100vh; */
+  background-position: center;
+  color: white;
+  
+}

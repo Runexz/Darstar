@@ -2,19 +2,21 @@ $(document).ready(function () {
 
     console.log('admin doc ready)')
 
+    $('.parTabUno').hide();
+    $('.parTabDos').hide();
+
+    $('.adminBodyOne').hide();  
+    $('.adminBodyTwo').hide();  
 
 
-
-
-
-
-    $('.adminBody').hide()
 
 
     $('.adminIdBtn').on('click', function (e) {
         e.preventDefault()
-        $('.adminBody').toggle()
+        // $('.adminBody').toggle()
         $('.jumbotron').slideUp()
+        $('.parTabUno').show();
+        $('.parTabDos').show();
 
 
 
@@ -28,6 +30,26 @@ $(document).ready(function () {
 
 
     })
+
+    $('.parTabUno').on('click', function(){
+
+        $('.adminBodyOne').toggle();
+        $('.adminBodyTwo').hide();
+
+    })
+
+
+    
+    $('.parTabDos').on('click', function(){
+
+        $('.adminBodyTwo').toggle();
+        $('.adminBodyOne').hide();
+
+    })
+
+
+
+
 
     $('.adminCommentLogSub').on('click', function(e){
         e.preventDefault();
