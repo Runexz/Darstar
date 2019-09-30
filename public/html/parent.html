@@ -74,8 +74,8 @@
 
         <!-- jumbotron -->
 
-        <div class="jumbotron">
-          <h1 class="display-4 text text-dark">DarStar!</h1>
+        <div class="jumbotron jumbo">
+          <h1 class="display-4 text text-dark text-center">DarStar!</h1>
 
           <hr class="my-4">
 
@@ -135,13 +135,25 @@
 
 
 
+              <div class="col-lg-6 col-sm-12 bg-primary behavColor">
+
+
+                <div class="colorWritten">
+                  <p class="text-center colorNameDisplay">-</p>
+                  <p class="text-center colorNameDisplay">-</p>
+                </div>
+
+              </div>
+
+
+
 
               <!-- all classes to append data are below -->
               <!-- student name and id will go above -->
 
 
               <!-- second box in scoreboard display -->
-              <div class="col-sm-6">
+              <div class="col-lg-6 col-sm-12">
                 <div class="card">
                   <div class="card-body">
 
@@ -174,7 +186,7 @@
                           <td class="pilFour"></td>
 
                         </tr>
-                        <tr class="bg-dark text-white">
+                        <tr class="bg-warning text-white">
                           <th scope="row">Missing Work:</th>
                           <td class="pilFive"></td>
 
@@ -192,15 +204,7 @@
                 </div>
               </div>
 
-              <div class="col-sm-6 behavColor">
 
-
-                <div class="colorWritten">
-                  <p class="text-center colorNameDisplay">color placeholder</p>
-                  <p class="text-center colorNameDisplay">color to be updated upon receipt of of dat from mysql</p>
-                </div>
-
-              </div>
 
 
             </div>
@@ -213,7 +217,7 @@
         </div>
 
 
-        <div class="card behavTab mt-3">
+        <div class="card behavTab mt-3 mb-4">
 
 
           <h5 class="card-header">Teacher's comment:</h5>
@@ -221,16 +225,307 @@
             <p class="comToPost"></p>
           </div>
         </div>
+        <!-- //////////////////////////////////////////////////////////// -->
+
+        <!-- tabs to provide more information to the parents -->
 
 
-        <a href="./contact.html" class="contactFontLink mb-5"><i class="fa fa-address-card fa-5x"></i></a>
-        <P class="hoverContact"></P>
 
 
+        <div class="row text-center">
+          <div class="col-lg-3 col-sm-6 parTabOne mb-3">
+            <div class="card ">
+              <div class="card-body">
+
+                <i class="fa fa-bullhorn fa-4x"></i>
+                <p class="card-text markerFont">Announcements</p>
+
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 parTabTwo mb-3">
+            <div class="card">
+              <div class="card-body">
+                <!-- <h5 class="card-title">Special title treatment</h5> -->
+                <i class="fa fa-calendar fa-4x" aria-hidden="true"></i>
+                <p class="card-text markerFont">Calendar</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-3 col-sm-6 parTabThree mb-3">
+            <div class="card">
+              <div class="card-body">
+
+                <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
+
+                <!-- <h5 class="card-title">Special title treatment</h5> -->
+                <p class="card-text markerFont">Grades</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 parTabFour mb-3">
+            <div class="card ">
+              <div class="card-body">
+
+                <i class="fa fa-bolt fa-4x" aria-hidden="true"></i>
+                <p class="card-text markerFont parTabFour">Weather / Closure</p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <div class="card parAncmnt mt-2 mb-5">
+          <h5 class="card-header">Announcements</h5>
+          <div class="card-body ">
+            <p>Hispanic Heritage Month program information will be sent out on Monday!</p>
+          </div>
+          <div class="card-footer text-muted">
+
+            <div class="text-center mt-1">
+
+              <button type="button" class="btn btn-primary backBtn pl-5 pr-5"><i
+                  class="fa fa-arrow-left fa-2x"></i></button>
+
+              <!-- <a href="http://google.com" class="btn btn-primary" target="_blank">Go to Google</a> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="card parCalend teachPic mt-2 mb-5">
+          <h5 class="card-header">Calendar</h5>
+          <div class="card-body ">
+
+            <img src="../images/schoolCalendarSample.png" class="parCalend" alt="schoolCalendSamp">
+
+
+
+          </div>
+
+
+          <div class="card-footer text-muted">
+
+            <div class="text-center mt-1">
+
+              <button type="button" class="btn btn-primary backBtn pl-5 pr-5"><i
+                  class="fa fa-arrow-left fa-2x"></i></button>
+
+              <!-- <a href="http://google.com" class="btn btn-primary" target="_blank">Go to Google</a> -->
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card parAttendGrade mt-2 mb-5">
+          <h5 class="card-header text-center">Attendance and Grades</h5>
+          <div class="card-body ">
+
+            <div class="row">
+              <div class="col-lg-8 col-sm-12">
+                <div class="card">
+                  <div class="card-body">
+
+                    <table class="table attenTab  text-center">
+                      <thead>
+                        <tr class="bg-dark text-white">
+                          <th scope="col">Month</th>
+                          <th scope="col">September</th>
+                          <th scope="col">October</th>
+
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="text-left">Total days </th>
+                          <td>17</td>
+                          <td>3~</td>
+
+
+
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-left">Present </th>
+                          <td>13</td>
+                          <td>3</td>
+
+
+
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-left">Tardy</th>
+                          <td>3</td>
+                          <td>0</td>
+
+
+
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-left">Absent</th>
+                          <td>4</td>
+                          <td>0</td>
+
+
+
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-left">Ratio</th>
+                          <td class="bg-danger">76%</td>
+                          <td class="bg-success">100%</td>
+
+
+
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="col-lg-4 col-sm-12 powerschoolLink">
+
+
+
+                <div class="card">
+                  <h5 class="card-header text-center">Grades</h5>
+                  <div class="card-body text-center">
+                    <img src="../images/powerschool_login_button.png" alt="powerschoolPic" class="powerschoolImg">
+                  </div>
+                </div>
+
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="card-footer text-muted">
+
+            <div class="text-center mt-1">
+
+              <button type="button" class="btn btn-primary backBtn pl-5 pr-5"><i
+                  class="fa fa-arrow-left fa-2x"></i></button>
+
+              <!-- <a href="http://google.com" class="btn btn-primary" target="_blank">Go to Google</a> -->
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="card parWeather mt-2 mb-5">
+          <h5 class="card-header">Weather</h5>
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-lg-4 col-sm-12 mt-2 mb-">
+
+                <div id="openweathermap-widget-15"></div>
+
+              </div>
+
+
+
+              <div class="col-lg-8 col-sm-12 mt-2 mb-2">
+                <div class="card">
+                  <div class="card-header text-center">
+                    <h5 class="localNewsBtn">District-wide School Closure</h5>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title"> <i class="fa fa-calendar fa-2x" aria-hidden="true"></i> <strong><span class="dateMoment"></span></strong></p>
+
+
+                    <p class="card-text">All schools are opened!</p>
+
+
+
+
+                  </div>
+
+                  <div class="card-footer text-muted">
+
+                    <div class="text-center mt-1">
+
+                      <div class="text-center localNewsBtn">
+
+                        <a href="https://www.nbcdfw.com/weather/school-closings/" class="btn bg-white  text-center"
+                          target="_blank"><i class="fa fa-tv fa-2x"></i>
+                          Go To Local News</a>
+
+
+
+                      </div>
+
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="card-footer text-muted">
+
+            <div class="text-center mt-1">
+
+              <button type="button" class="btn btn-primary backBtn pl-5 pr-5"><i
+                  class="fa fa-arrow-left fa-2x"></i></button>
+
+              <!-- <a href="http://google.com" class="btn btn-primary" target="_blank">Go to Google</a> -->
+
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
 
       </div>
-
-    </div>
 
 
   </section>
@@ -249,6 +544,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+
 
 
   <script src="../js/index.js"></script>
