@@ -42,7 +42,7 @@
 
 
       <nav class="navbar navbaro sticky-top navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-        <a class="navbar-brand" href="index.html">DarStar</a>
+        <a class="navbar-brand" href="./index.html">DarStar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -83,7 +83,7 @@
 
 
           <!-- student ID input -->
-          <form id="form" action="" method="post" class="form-inline">
+          <form id="form" action="" method="GET" class="form-inline">
 
             <div class="form-group mb-2">
 
@@ -107,7 +107,9 @@
 
 
         <div class="card teaBeLogTab col-12 mt-3">
-          <h5 class="card-header">//student Name// + //iD//</h5>
+          <!-- student name and ID displayed here -->
+          <h5 class="card-header studentName"></h5>
+          <h5 class="card-header studentId"></h5>
 
 
 
@@ -280,7 +282,7 @@
                       <label class="form-check-label" for="gridRadios2">
                         Yes
                       </label>
-                    </div> 
+                    </div>
 
                   </div>
                 </div>
@@ -319,7 +321,7 @@
 
               </div>
 
-             
+
               <div class="col-12">
 
 
@@ -388,9 +390,8 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -398,7 +399,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-    <script src="../js/index.js"></script>
+  <script src="../js/index.js"></script>
 
   <script src="../js/teacher.js"></script>
 
