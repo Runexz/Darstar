@@ -1,6 +1,8 @@
-CREATE TABLE Classroom
-(
-	id int NOT NULL AUTO_INCREMENT,
+use darstardb;
+
+CREATE TABLE Classroom(
+    id int NOT NULL
+    AUTO_INCREMENT,
 	studentid INTEGER NOT NULL,
     name varchar(100) NOT NULL,
     pillar1 INTEGER NOT NULL,
@@ -13,5 +15,13 @@ CREATE TABLE Classroom
     descriptioncomments VARCHAR(255) NOT NULL,
     createdAt DATETIME NOT NULL,
     updatedAt DATETIME NOT NULL,
-	PRIMARY KEY (id)
-);
+	PRIMARY KEY(id)
+)
+
+
+Create TABLE adminInfo(
+    id int NOT NULL AUTO_INCREMENT,
+    anncmtDate varchar(45),
+    schoolAnnouncemnt varchar(1000) NOT NULL,
+    PRIMARY KEY(id)
+)
