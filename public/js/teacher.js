@@ -113,6 +113,11 @@ function disableBtn() {
 
 $('.teachBehavLog').on('click', function (event) {
 
+  var currTimeTeach = moment().format('LTS')
+  var currDateTeach = moment().format();
+
+  console.log(currTimeTeach);
+
 
 
 
@@ -246,6 +251,13 @@ $('.teachBehavLog').on('click', function (event) {
 
 
   console.log('-------------------------------------------------')
+
+  console.log(currTimeTeach);
+  console.log(currDateTeach);
+
+  console.log('-------------------------------------------------')
+
+
 
 
 
