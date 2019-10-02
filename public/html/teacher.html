@@ -21,7 +21,7 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  
+
 
 
 
@@ -111,8 +111,18 @@
         <div class="card teaBeLogTab col-12 mt-3">
           <!-- student name and ID displayed here -->
           <h5 class="card-header studentName"></h5>
-          <h5 class="card-header studentId"></h5>
+          <h5 class="card-header studentId">Student Id: <span class=stuId></span></h5>
 
+          <div class="col-lg-12 col-sm-1">
+            <form id="idBox" action="" method="POST" class="form-inline ">
+              <div class="form-group mb-2">
+                <label for="idteachComment" class="sr-only">Comment:</label>
+                <textarea name="commentBox" id="idteachComment" cols="60" class="d-block"
+                  placeholder="Re-enter ID..."></textarea>
+                <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
+              </div>
+            </form>
+          </div>
 
 
           <div class="card-body">
@@ -326,75 +336,75 @@
 
               <div class="col-12">
 
-              <div class="col-lg-12 col-sm-1">
+                <div class="col-lg-12 col-sm-1">
 
 
-                <form id="teaComBox" action="" method="POST" class="form-inline ">
+                  <form id="teaComBox" action="" method="POST" class="form-inline ">
 
-                  <div class="form-group mb-2">
+                    <div class="form-group mb-2">
 
-                    <label for="teachComment" class="sr-only">Comment:</label>
+                      <label for="teachComment" class="sr-only">Comment:</label>
 
-                    <textarea name="commentBox" id="teachComment" cols="60" class="d-block"
-                      placeholder="Leave a comment here..."></textarea>
+                      <textarea name="commentBox" id="teachComment" cols="60" class="d-block"
+                        placeholder="Leave a comment here..."></textarea>
 
-                    <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
+                      <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
 
-                  </div>
+                    </div>
 
-                </form>
+                  </form>
+
+
+                </div>
+
+                <span class="textCheckForm text-danger"></span>
+
+
 
 
               </div>
 
-              <span class="textCheckForm text-danger"></span>
 
 
-
+              <button type="button" class="btn btn-primary teachBehavLog mt-3">Submit</button>
 
             </div>
 
 
 
-            <button type="button" class="btn btn-primary teachBehavLog mt-3">Submit</button>
+
+
 
           </div>
 
 
 
-
-
-
         </div>
 
-                  
-
-      </div>
-
-      <div class="card teaBeLogTab mt-2 mb-5">
+        <div class="card teaBeLogTab mt-2 mb-5">
 
 
-        <h5 class="card-header"> Announcements <i class="fa fa-scroll fa-1x"></i></h5>
-        <div class="card-body ">
-          <p>Hispanic Heritage Month program information will be sent out on Monday!</p>
+          <h5 class="card-header"> Announcements <i class="fa fa-scroll fa-1x"></i></h5>
+          <div class="card-body ">
+            <p>Hispanic Heritage Month program information will be sent out on Monday!</p>
+          </div>
         </div>
-      </div>
 
 
 
 
-      <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
-      
-      <div class="adminPage">
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
 
-  
+        <div class="adminPage">
+
+
           <i class="fa fa-user fa-4x" aria-hidden="true"></i>
-      
+
+
+        </div>
+
 
       </div>
-
-
-    </div>
 
 
   </section>

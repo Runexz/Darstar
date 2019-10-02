@@ -22,11 +22,19 @@ module.exports = function(app) {
 
   // modify existing student in classrooms
   app.put("/api/classrooms/:id", function(req, res) {
-    db.Classrooms.update(
-      req.body,
+    db.Classrooms.update({
+      pillar1: req.body.pillar1,
+      pillar2: req.body.pillar2,
+      pillar3: req.body.pillar3,
+      pillar4: req.body.pillar4,
+      color: req.body.color,
+      descriptioncomments: req.body.descriptioncomments,
+      createdAt: req.body.createdAt,
+      missingwork: req.body.missingwork
+    },
       {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       }).then(function(dbClassroom) {
       res.json(dbClassroom);

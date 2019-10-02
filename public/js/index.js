@@ -1,3 +1,6 @@
+//var studentInfoUpdate = require("./teacher");
+// var putTeacherInfo = require("./teacher");
+
 // Get references to parent.html page elements
 var stuNameID = $(".stuNameID");
 var pillarOne = $(".pilOne");
@@ -9,7 +12,7 @@ var teacherComment = $(".comToPost");
 
 // Get references to teacher.html page elements
 var teacherStuName = $(".studentName");
-var teacherStuId = $(".studentId");
+var teacherStuId = $(".stuId");
 
 
 
@@ -51,7 +54,7 @@ var API = {
       },
       type: "PUT",
       url: `api/classrooms/${id}`,
-      data: JSON.stringify(classroom)
+      data: JSON.stringify(classroom.putTeacherInfo)
     }).then(function (data) {
       console.log(data);
       // data.pillar1 = radioValue;
@@ -70,7 +73,7 @@ var API = {
       type: "GET"
     }).then(function (data) {
       teacherStuName.append("Student Name: " + data.name);
-      teacherStuId.append("Student Id: " + data.studentid)
+      teacherStuId.append(data.studentid)
       console.log("Student Name: " + data.name + "Student Id: " + data.studentid);
     });
   },
