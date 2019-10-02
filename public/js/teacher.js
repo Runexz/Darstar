@@ -64,7 +64,8 @@ function disableBtn() {
 
   $(".teachBehavLog").attr("disabled", true)
 
-  $("#teachComment").on('click', function () {
+  // $("#teachComment").on('click', function () {
+  $("#idteachComment").on('click', function () {
 
     var radioOne = $("input[name='inlineRadioOptions4']:checked").val()
     var radioTwo = $("input[name='inlineRadioOptions3']:checked").val()
@@ -89,7 +90,7 @@ function disableBtn() {
 
     if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1 && textboxOne >= 2) {
 
-      console.log('true')
+      console.log('Met all requirements to submit')
 
       $(".teachBehavLog").attr("disabled", false);
 
@@ -108,6 +109,12 @@ function disableBtn() {
 }
 
 
+
+//page refresh
+
+function refreshPage(){
+  window.location.reload();
+} 
 
 
 
@@ -271,6 +278,12 @@ $('.teachBehavLog').on('click', function (event) {
   // console.log(studentInfoUpdate);
 
  // module.exports = studentInfoUpdate;
+
+ console.log('---------------------------------------------------------------------------')
+
+
+
+ console.log('---------------------------------------------------------------------------')
   
 
  var putTeacherInfo = {
@@ -299,6 +312,11 @@ $('.teachBehavLog').on('click', function (event) {
       }).then(function (data) {
         console.log(data);
       });
+
+
+      //REFRESH page
+
+      refreshPage()
 
 
 })
