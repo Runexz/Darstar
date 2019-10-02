@@ -20,7 +20,9 @@ $(document).ready(function () {
 
     $("#form").submit(function (event) {
       var textarea = $("#inputPassword3");
+      console.log(textarea.val().trim())
       var studentIdTeacher = parseInt(textarea.val().trim());
+      console.log(studentIdTeacher);
       if (textarea.val().trim() === "") {
         // No message, add red highlighting to indicate error
         textarea.css("box-shadow", "0 0 12px #811");
@@ -30,6 +32,7 @@ $(document).ready(function () {
 
       } else {
         API.getStudentbyId(studentIdTeacher);
+         
         console.log('form is completed')
 
         $('.jumbotron').slideUp();
@@ -184,6 +187,7 @@ $('.teachBehavLog').on('click', function (event) {
 
   var scoreTotal = (parseInt(radioValue) + parseInt(radioValue2) + parseInt(radioValue3) + parseInt(radioValue4));
 
+  var studentIdInput = parseInt($("#idteachComment").val().trim());
 
   var teacherCommment = $('#teachComment').val();
 
@@ -244,42 +248,45 @@ $('.teachBehavLog').on('click', function (event) {
 
 
   console.log('-------------------------------------------------')
+
+  var currentFormTime = 1;
+  console.log(currentFormTime);
   //store studentID number into a variable then parseint that will be used later
   
-  var textStudentId =  $(".studentId").val().trim();
-  var studentInfoUpdate = parseInt(textStudentId);
+  // var textStudentId =  $(".stuId").val().trim();
+  // console.log(textStudentId);
+  // var studentInfoUpdate = parseInt(studentIdInput).val().trim();
+  // console.log(studentInfoUpdate);
 
-  module.exports = studentInfoUpdate;
+ // module.exports = studentInfoUpdate;
   
 
-  var putTeacherInfo = [
-    {"pillar1": radioValue},
-    {"pillar2": radioValue2},
-    {"pillar3": radioValue3},
-    {"pillar4": radioValue4},
-    {"color": behaviorColor},
-    {"descriptioncomments": teacherCommment},
-    {"createdAt": moment().format('MMMM Do YYYY, h:mm:ss a')},
-    {"missingwork": isHwChecked}
-  ];
+ var putTeacherInfo = {
+   pillar1: radioValue,
+   pillar2: radioValue2,
+   pillar3: radioValue3,
+   pillar4: radioValue4,
+   color: behaviorColor,
+   descriptioncomments: teacherCommment,
+   createdAt: currentFormTime,
+   missingwork: isHwChecked
+ };
   
-  module.exports = putTeacherInfo;
+
+  //module.exports = putTeacherInfo;
 
 
   // API.updateStudentbyId(studentInfoUpdate)
 
   // var classroomObj = JSON.stringify(classroom);
 
-      // $.ajax({
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   },
-      //   method: "PUT",
-      //   url: "api/classrooms/" + studentInfoUpdate,
-      //   data: putTeacherInfo
-      // }).then(function (data) {
-      //   console.log(data);
-      // });
+      $.ajax({
+        method: "PUT",
+        url: "/api/classrooms/" + studentIdInput,
+        data: putTeacherInfo
+      }).then(function (data) {
+        console.log(data);
+      });
 
 
 })

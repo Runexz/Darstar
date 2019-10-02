@@ -1,4 +1,4 @@
-// var studentInfoUpdate = require("./teacher");
+//var studentInfoUpdate = require("./teacher");
 // var putTeacherInfo = require("./teacher");
 
 // Get references to parent.html page elements
@@ -12,7 +12,7 @@ var teacherComment = $(".comToPost");
 
 // Get references to teacher.html page elements
 var teacherStuName = $(".studentName");
-var teacherStuId = $(".studentId");
+var teacherStuId = $(".stuId");
 
 
 
@@ -73,7 +73,7 @@ var API = {
       type: "GET"
     }).then(function (data) {
       teacherStuName.append("Student Name: " + data.name);
-      teacherStuId.append("Student Id: " + data.studentid)
+      teacherStuId.append(data.studentid)
       console.log("Student Name: " + data.name + "Student Id: " + data.studentid);
     });
   },
