@@ -139,9 +139,7 @@ $('.teachBehavLog').on('click', function (event) {
 
   }
 
-      //store studentID number into a variable then parseint that will be used later
-      var textStudentId =  $(".studentId").val().trim();
-      var studentInfoUpdate = parseInt(textStudentId);
+      
 
 
 
@@ -246,7 +244,42 @@ $('.teachBehavLog').on('click', function (event) {
 
 
   console.log('-------------------------------------------------')
+  //store studentID number into a variable then parseint that will be used later
+  
+  var textStudentId =  $(".studentId").val().trim();
+  var studentInfoUpdate = parseInt(textStudentId);
 
+  module.exports = studentInfoUpdate;
+  
+
+  var putTeacherInfo = [
+    {"pillar1": radioValue},
+    {"pillar2": radioValue2},
+    {"pillar3": radioValue3},
+    {"pillar4": radioValue4},
+    {"color": behaviorColor},
+    {"descriptioncomments": teacherCommment},
+    {"createdAt": moment().format('MMMM Do YYYY, h:mm:ss a')},
+    {"missingwork": isHwChecked}
+  ];
+  
+  module.exports = putTeacherInfo;
+
+
+  // API.updateStudentbyId(studentInfoUpdate)
+
+  // var classroomObj = JSON.stringify(classroom);
+
+      // $.ajax({
+      //   headers: {
+      //     "Content-Type": "application/json"
+      //   },
+      //   method: "PUT",
+      //   url: "api/classrooms/" + studentInfoUpdate,
+      //   data: putTeacherInfo
+      // }).then(function (data) {
+      //   console.log(data);
+      // });
 
 
 })
@@ -260,25 +293,14 @@ $('.adminPage').on('click', function () {
 
 
 
-      // classroom.pillar1 = radioValue;
-      // classroom.pillar2 = radioValue2;
-      // classroom.pillar3 = radioValue3;
-      // classroom.pillar4 = radioValue4;
-      // classroom.color = behaviorColor;
-      // classroom.descriptioncomments = teacherCommment;
-      // classroom.missingwork = isHwChecked;
-      // var classroomObj = JSON.stringify(classroom);
-      // $.ajax({
-      //   headers: {
-      //     "Content-Type": "application/json"
-      //   },
-      //   method: "PUT",
-      //   url: "api/classrooms/1",
-      //   data: classroomObj
-      // }).then(function (data) {
-      //   console.log(data);
-      // });
+   
 
+
+
+
+     
+
+      
       
 
 })

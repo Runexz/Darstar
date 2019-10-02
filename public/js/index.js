@@ -1,3 +1,6 @@
+// var studentInfoUpdate = require("./teacher");
+// var putTeacherInfo = require("./teacher");
+
 // Get references to parent.html page elements
 var stuNameID = $(".stuNameID");
 var pillarOne = $(".pilOne");
@@ -51,7 +54,7 @@ var API = {
       },
       type: "PUT",
       url: `api/classrooms/${id}`,
-      data: JSON.stringify(classroom)
+      data: JSON.stringify(classroom.putTeacherInfo)
     }).then(function (data) {
       console.log(data);
       // data.pillar1 = radioValue;

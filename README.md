@@ -50,4 +50,14 @@ Once the Id is entered the evaluation form is displayed for the teacher to fill 
 
 # Resources
 
-NPM used _(Node Package Manager)_: 
+NPM used _(Node Package Manager)_: dotenv, express, moment, mysql2, and sequelize
+API used: [Open Weather Map](https://openweathermap.org/)
+Library, package or technology used: [JQuery](https://jquery.com/), [Momentjs](https://momentjs.com/), [Google Fonts](https://fonts.google.com/), and [Bootstrap](https://getbootstrap.com/)
+
+[Heroku](https://www.heroku.com) is used to host the application
+
+## Contributers
+
+* [Stama Eleazar](https://github.com/seleazar10)
+* [Ricardo Rodriguez](https://github.com/Runexz)
+* [Darrian](https://github.com/CodingStudentDarrian)
