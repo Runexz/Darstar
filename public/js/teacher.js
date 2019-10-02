@@ -259,7 +259,7 @@ $('.teachBehavLog').on('click', function (event) {
 
   console.log('-------------------------------------------------')
 
-
+  // Create a variable that holds all results that the teacher enters when submit is pressed
   var putTeacherInfo = {
     pillar1: radioValue,
     pillar2: radioValue2,
@@ -271,7 +271,8 @@ $('.teachBehavLog').on('click', function (event) {
     missingwork: isHwChecked
   };
 
-
+  // The variable is then put into the data: of the ajax method "PUT" to update the api/classrooms
+  // Variable studentIdInput is grabbed from when the teacher enters the student id
   $.ajax({
     method: "PUT",
     url: "/api/classrooms/" + studentIdInput,
@@ -279,8 +280,6 @@ $('.teachBehavLog').on('click', function (event) {
   }).then(function (data) {
     console.log(data);
   });
-
-
 })
 
 
