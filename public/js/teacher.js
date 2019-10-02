@@ -18,24 +18,24 @@ $(document).ready(function () {
 
 
 
-    $("#form").submit(function (event) {
-      var textarea = $("#inputPassword3");
-      console.log(textarea.val().trim())
-      var studentIdTeacher = parseInt(textarea.val().trim());
-      console.log(studentIdTeacher);
-      if (textarea.val().trim() === "") {
-        // No message, add red highlighting to indicate error
-        textarea.css("box-shadow", "0 0 12px #811");
-        $('.teacherLogAppend').text("Please enter the student's ID")
-        $('.teacherLogAppend').slideDown()
-        event.preventDefault();
+$("#form").submit(function (event) {
+  var textarea = $("#inputPassword3");
+  console.log(textarea.val().trim())
+  var studentIdTeacher = parseInt(textarea.val().trim());
+  console.log(studentIdTeacher);
+  if (textarea.val().trim() === "") {
+    // No message, add red highlighting to indicate error
+    textarea.css("box-shadow", "0 0 12px #811");
+    $('.teacherLogAppend').text("Please enter the student's ID")
+    $('.teacherLogAppend').slideDown()
+    event.preventDefault();
 
-      } else {
-        API.getStudentbyId(studentIdTeacher);
-         
-        console.log('form is completed')
+  } else {
+    API.getStudentbyId(studentIdTeacher);
 
-        $('.jumbotron').slideUp();
+    console.log('form is completed')
+
+    $('.jumbotron').slideUp();
 
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -119,7 +119,7 @@ $('.teachBehavLog').on('click', function (event) {
   var currTimeTeach = moment().format('LTS')
   var currDateTeach = moment().format('L');
 
-  console.log(currTimeTeach);
+  console.log(currDateTeach);
 
 
 
@@ -147,7 +147,7 @@ $('.teachBehavLog').on('click', function (event) {
 
   }
 
-      
+
 
 
 
@@ -198,11 +198,11 @@ $('.teachBehavLog').on('click', function (event) {
 
   console.log("teacher comment: " + teacherCommment)
 
-      
-      var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
-      if (radioValue) {
-        console.log("perseverance: " + radioValue);
-      }
+
+  var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
+  if (radioValue) {
+    console.log("perseverance: " + radioValue);
+  }
 
 
 
@@ -260,45 +260,25 @@ $('.teachBehavLog').on('click', function (event) {
   console.log('-------------------------------------------------')
 
 
-
-  var currentFormTime = 1;
-  console.log(currentFormTime);
-  //store studentID number into a variable then parseint that will be used later
-  
-  // var textStudentId =  $(".stuId").val().trim();
-  // console.log(textStudentId);
-  // var studentInfoUpdate = parseInt(studentIdInput).val().trim();
-  // console.log(studentInfoUpdate);
-
- // module.exports = studentInfoUpdate;
-  
-
- var putTeacherInfo = {
-   pillar1: radioValue,
-   pillar2: radioValue2,
-   pillar3: radioValue3,
-   pillar4: radioValue4,
-   color: behaviorColor,
-   descriptioncomments: teacherCommment,
-   createdAt: currentFormTime,
-   missingwork: isHwChecked
- };
-  
-
-  //module.exports = putTeacherInfo;
+  var putTeacherInfo = {
+    pillar1: radioValue,
+    pillar2: radioValue2,
+    pillar3: radioValue3,
+    pillar4: radioValue4,
+    color: behaviorColor,
+    descriptioncomments: teacherCommment,
+    createdAt: currDateTeach,
+    missingwork: isHwChecked
+  };
 
 
-  // API.updateStudentbyId(studentInfoUpdate)
-
-  // var classroomObj = JSON.stringify(classroom);
-
-      $.ajax({
-        method: "PUT",
-        url: "/api/classrooms/" + studentIdInput,
-        data: putTeacherInfo
-      }).then(function (data) {
-        console.log(data);
-      });
+  $.ajax({
+    method: "PUT",
+    url: "/api/classrooms/" + studentIdInput,
+    data: putTeacherInfo
+  }).then(function (data) {
+    console.log(data);
+  });
 
 
 })
@@ -312,15 +292,15 @@ $('.adminPage').on('click', function () {
 
 
 
-   
 
 
 
 
-     
 
-      
-      
+
+
+
+
 
 })
 
