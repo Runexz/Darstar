@@ -4,9 +4,13 @@ $(document).ready(function () {
 
     $('.parTabUno').hide();
     $('.parTabDos').hide();
+    $('.parTabTres').hide();
+    $('.parTabQuar').hide();
 
     $('.adminBodyOne').hide();  
     $('.adminBodyTwo').hide();  
+    $('.adminBodyThree').hide();  
+    $('.adminBodyFour').hide();  
 
 
 
@@ -17,6 +21,8 @@ $(document).ready(function () {
         $('.jumbotron').slideUp()
         $('.parTabUno').show();
         $('.parTabDos').show();
+        $('.parTabTres').show();
+        $('.parTabQuar').show();
 
 
 
@@ -35,6 +41,8 @@ $(document).ready(function () {
 
         $('.adminBodyOne').toggle();
         $('.adminBodyTwo').hide();
+        $('.adminBodyThree').hide();  
+    $('.adminBodyFour').hide(); 
 
     })
 
@@ -42,8 +50,29 @@ $(document).ready(function () {
     
     $('.parTabDos').on('click', function(){
 
+        $('.adminBodyTwo').hide();
+        $('.adminBodyOne').hide();
+        $('.adminBodyThree').hide();          
+        $('.adminBodyFour').toggle(); 
+
+    })
+    
+    $('.parTabTres').on('click', function(){
+
+        $('.adminBodyTwo').hide();
+        $('.adminBodyOne').hide();
+        
+        $('.adminBodyFour').hide(); 
+        $('.adminBodyThree').toggle(); 
+
+    })
+    
+    $('.parTabQuar').on('click', function(){
+
         $('.adminBodyTwo').toggle();
         $('.adminBodyOne').hide();
+        $('.adminBodyThree').hide();  
+        $('.adminBodyFour').hide(); 
 
     })
 

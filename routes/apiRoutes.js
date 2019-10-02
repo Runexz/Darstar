@@ -41,12 +41,18 @@ module.exports = function(app) {
     });
   });
 
+
+
+
   // Create a new student in classrooms
   app.post("/api/classrooms", function(req, res) {
     db.Classrooms.create(req.body).then(function(dbClassroom) {
       res.json(dbClassroom);
     });
   });
+
+
+  
 
   // Delete an example by id
   app.delete("/api/classrooms/:id", function(req, res) {
