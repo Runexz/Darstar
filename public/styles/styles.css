@@ -269,3 +269,7 @@ over tooltip */
 .colDesBtn{
   padding: 10px 30px;
 }
+
+.bg-danger{
+  background-color: blue;
+}

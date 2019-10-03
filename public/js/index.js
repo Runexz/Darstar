@@ -104,16 +104,17 @@ var API = {
       var databaseColor = data.color;
       if(databaseColor === 'blue'){
         $('.behavColor').addClass('bg-primary');
-       }else if(databaseColor === 'green'){
+       }else if(databaseColor === 'Green'){
         $('.behavColor').addClass('bg-success');
-       }else if(databaseColor === 'yellow'){
+       }else if(databaseColor === 'Yellow'){
         $('.behavColor').addClass('bg-warning');
-       }else if(databaseColor === 'orange'){
-        $('.behavColor').addClass('bg-orange');
-       }else if(databaseColor === 'red'){
+       }else if(databaseColor === 'Orange'){
+        $('.behavColor').addClass('bg-warning');
+       }else if(databaseColor === 'Red'){
         $('.behavColor').addClass('bg-danger');
        };
        console.log("Student average color: " + data.color);
+       console.log("Student average color: " + databaseColor);
 
       teacherComment.append(data.descriptioncomments);
       console.log(data.descriptioncomments);
