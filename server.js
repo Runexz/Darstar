@@ -11,7 +11,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
-
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
@@ -36,4 +35,3 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
-
