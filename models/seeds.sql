@@ -1,4 +1,4 @@
-use darstardb;
+USE darstardb;
 
 CREATE TABLE Classrooms(
     id int NOT NULL
