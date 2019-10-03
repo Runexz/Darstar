@@ -109,7 +109,7 @@ var API = {
        }else if(databaseColor === 'Yellow'){
         $('.behavColor').addClass('bg-warning');
        }else if(databaseColor === 'Orange'){
-        $('.behavColor').addClass('bg-warning');
+        $('.behavColor').addClass('bg-orange');
        }else if(databaseColor === 'Red'){
         $('.behavColor').addClass('bg-danger');
        };

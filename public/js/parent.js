@@ -22,10 +22,13 @@ $(document).ready(function () {
 
   //moment JS 
   var currTime = moment().format('llll');
+  var parDate = moment().format('L')
 
   console.log(currTime);
 
   $('.dateMoment').text(currTime);
+  $('.dateParent').text(parDate);
+
 
 
 

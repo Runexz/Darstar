@@ -270,6 +270,12 @@ over tooltip */
   padding: 10px 30px;
 }
 
-.bg-danger{
-  background-color: blue;
+.bg-orange{
+  background-color: #b77d01;
+}
+
+.orang{
+
+  background-color: #b77d01;
+  
 }
