@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "232400",
     "database": "darstardb",
     "host": "localhost",
     "dialect": "mysql"

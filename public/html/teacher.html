@@ -113,16 +113,7 @@
           <h5 class="card-header studentName"></h5>
           <h5 class="card-header studentId">Student Id: <span class=stuId></span></h5>
 
-          <div class="col-lg-12 col-sm-1">
-            <form id="idBox" action="" method="POST" class="form-inline ">
-              <div class="form-group mb-2">
-                <label for="idteachComment" class="sr-only">Comment:</label>
-                <textarea name="commentBox" id="idteachComment" cols="60" class="d-block"
-                  placeholder="Re-enter ID..."></textarea>
-                <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
-              </div>
-            </form>
-          </div>
+
 
 
           <div class="card-body">
@@ -138,7 +129,7 @@
               </thead>
               <tbody class="text-center">
                 <tr>
-                  <th scope="row" class="text-left behTabTitle ">Perseverance</th>
+                  <th scope="row" class="text-left behTabTitle ">Respect</th>
                   <td>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value=1>
@@ -168,7 +159,7 @@
 
                 </tr>
                 <tr>
-                  <th scope="row" class="text-left behTabTitle">Leadership</th>
+                  <th scope="row" class="text-left behTabTitle">Kindness</th>
                   <td>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value=1>
@@ -198,7 +189,7 @@
 
                 </tr>
                 <tr>
-                  <th scope="row" class="text-left behTabTitle">Uplift</th>
+                  <th scope="row" class="text-left behTabTitle">On-Task</th>
                   <td>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
@@ -233,7 +224,7 @@
 
                 </tr>
                 <tr>
-                  <th scope="row" class="text-left behTabTitle">Scholarship</th>
+                  <th scope="row" class="text-left behTabTitle">Listening Skills</th>
                   <td>
                     <div class="form-check form-check-inline">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1"
@@ -276,11 +267,49 @@
               </tbody>
             </table>
 
+            <div class="row">
+              <div class="col-12 ml-0">
+
+                <div class="col-lg-12 col-sm-1">
+
+
+                  <form id="teaComBox" action="" method="POST" class="form-inline ">
+
+                    <div class="form-group">
+
+                      <!-- <label for="teachComment" class="sr-only">Comment:</label> -->
+                      <p class="markerFont mr-3">Teacher's Comment: </p>
+
+                      <textarea name="commentBox" id="teachComment" cols="60" class="d-block"
+                        placeholder="Leave a comment here..."></textarea>
+
+                      <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
+
+                    </div>
+
+                  </form>
+
+
+                </div>
+
+
+
+
+              </div>
+            </div>
+
+
+
+
+            <hr>
+
+
             <form>
 
-              <fieldset class="form-group" id="formWork">
+              <fieldset class="form-group mt-4" id="formWork">
                 <div class="row">
-                  <legend class="col-form-label col-8 pt-0">Is the student missing any work?</legend>
+                  <legend class="col-form-label col-8 pt-0"><i class="fa fa-star"></i>Is the student missing any work?
+                  </legend>
                   <div class="col-sm-10">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="No"
@@ -302,73 +331,63 @@
 
 
             </form>
-            <tbody>
-
-              <tr></tr>
-              <th scope="row" class="text-left behTabTitle"></th>
-              <td></td>
-
-
-
-            </tbody>
 
 
 
 
+            <div class="col-lg-5 col-sm-12 mb-4">
 
-            <div class="row">
-
-              <div class="col-lg-5 col-sm-12 mb-4">
-
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text text-light bg-dark" id="inputGroupFileAddon01">Upload</span>
-                  </div>
-                  <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="inputGroupFile01"
-                      aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label text-primary" for="inputGroupFile01">Choose file</label>
-                  </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text text-light bg-dark" id="inputGroupFileAddon01">Upload</span>
                 </div>
-
-              </div>
-
-
-              <div class="col-12">
-
-                <div class="col-lg-12 col-sm-1">
-
-
-                  <form id="teaComBox" action="" method="POST" class="form-inline ">
-
-                    <div class="form-group mb-2">
-
-                      <label for="teachComment" class="sr-only">Comment:</label>
-
-                      <textarea name="commentBox" id="teachComment" cols="60" class="d-block"
-                        placeholder="Leave a comment here..."></textarea>
-
-                      <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
-
-                    </div>
-
-                  </form>
-
-
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label text-primary" for="inputGroupFile01">Choose file</label>
                 </div>
-
-                <span class="textCheckForm text-danger"></span>
-
-
-
-
               </div>
 
 
 
-              <button type="button" class="btn btn-primary teachBehavLog mt-3">Submit</button>
 
             </div>
+
+
+            <hr>
+
+
+            <span class="textCheckForm text-danger col-12"></span>
+
+            <div class="mt-2">
+
+              <div class="col-lg-6 col-sm-12">
+                <form id="idBox" action="" method="POST" class="form-inline ">
+                  <div class="form-group mb-2">
+                    <label for="idteachComment" class="sr-only">Comment:</label>
+                    <span class="mr-1"><i class="fa fa-star"></i>To submit, confirm student's</span>
+                    <textarea name="commentBox" id="idteachComment" cols="5" rows="1" placeholder="ID..."></textarea>
+                    <!-- <input type="text" class="d-block mb-3 p -5" id="teachComment"  placeholder="Leave a comment here..."> -->
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-lg-5">
+                <button type="button" class="btn btn-primary teachBehavLog">Submit</button>
+              </div>
+
+            </div>
+
+
+
+
+
+
+            <hr>
+
+
+
+
 
 
 
@@ -379,7 +398,16 @@
 
 
 
+
+
+
         </div>
+
+
+
+      </div>
+
+      <div class="container">
 
         <div class="card teaBeLogTab mt-2 mb-5">
 
@@ -390,21 +418,28 @@
           </div>
         </div>
 
-
-
-
-        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
-
         <div class="adminPage">
-
-
-          <i class="fa fa-user fa-4x" aria-hidden="true"></i>
-
-
-        </div>
+            <i class="fa fa-user fa-4x" aria-hidden="true"></i>
+      
+      
+          </div>
 
 
       </div>
+
+     
+
+
+
+    </div>
+
+
+
+
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste officia quaerat commodi vel dolore culpa at, ex iure ipsam a, accusantium provident dolorum impedit. Ut officiis nemo vel vero consequuntur.</p> -->
+
+    
 
 
   </section>
@@ -423,7 +458,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 
   <script src="../js/index.js"></script>
