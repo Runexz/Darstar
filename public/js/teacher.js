@@ -64,7 +64,8 @@ function disableBtn() {
 
   $(".teachBehavLog").attr("disabled", true)
 
-  $("#teachComment").on('click', function () {
+  // $("#teachComment").on('click', function () {
+  $("#idteachComment").on('click', function () {
 
     var radioOne = $("input[name='inlineRadioOptions4']:checked").val()
     var radioTwo = $("input[name='inlineRadioOptions3']:checked").val()
@@ -89,7 +90,7 @@ function disableBtn() {
 
     if (parseInt(radioOne) >= 1 && parseInt(radioTwo) >= 1 && parseInt(radioThree) >= 1 && parseInt(radioFour) >= 1 && textboxOne >= 2) {
 
-      console.log('true')
+      console.log('Met all requirements to submit')
 
       $(".teachBehavLog").attr("disabled", false);
 
@@ -108,6 +109,12 @@ function disableBtn() {
 }
 
 
+
+//page refresh
+
+function refreshPage(){
+  window.location.reload();
+} 
 
 
 
@@ -259,27 +266,59 @@ $('.teachBehavLog').on('click', function (event) {
 
   console.log('-------------------------------------------------')
 
-  // Create a variable that holds all results that the teacher enters when submit is pressed
-  var putTeacherInfo = {
-    pillar1: radioValue,
-    pillar2: radioValue2,
-    pillar3: radioValue3,
-    pillar4: radioValue4,
-    color: behaviorColor,
-    descriptioncomments: teacherCommment,
-    createdAt: currDateTeach,
-    missingwork: isHwChecked
-  };
 
-  // The variable is then put into the data: of the ajax method "PUT" to update the api/classrooms
-  // Variable studentIdInput is grabbed from when the teacher enters the student id
-  $.ajax({
-    method: "PUT",
-    url: "/api/classrooms/" + studentIdInput,
-    data: putTeacherInfo
-  }).then(function (data) {
-    console.log(data);
-  });
+
+  var currentFormTime = 1;
+  console.log(currentFormTime);
+  //store studentID number into a variable then parseint that will be used later
+  
+  // var textStudentId =  $(".stuId").val().trim();
+  // console.log(textStudentId);
+  // var studentInfoUpdate = parseInt(studentIdInput).val().trim();
+  // console.log(studentInfoUpdate);
+
+ // module.exports = studentInfoUpdate;
+
+ console.log('---------------------------------------------------------------------------')
+
+
+
+ console.log('---------------------------------------------------------------------------')
+  
+
+ var putTeacherInfo = {
+   pillar1: radioValue,
+   pillar2: radioValue2,
+   pillar3: radioValue3,
+   pillar4: radioValue4,
+   color: behaviorColor,
+   descriptioncomments: teacherCommment,
+   createdAt: currentFormTime,
+   missingwork: isHwChecked
+ };
+  
+
+  //module.exports = putTeacherInfo;
+
+
+  // API.updateStudentbyId(studentInfoUpdate)
+
+  // var classroomObj = JSON.stringify(classroom);
+
+      $.ajax({
+        method: "PUT",
+        url: "/api/classrooms/" + studentIdInput,
+        data: putTeacherInfo
+      }).then(function (data) {
+        console.log(data);
+      });
+
+
+      //REFRESH page
+
+      refreshPage()
+
+
 })
 
 

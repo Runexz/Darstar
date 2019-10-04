@@ -76,7 +76,7 @@
 
                                         <img src="../images/teacherA.png" alt="teacherA" class="teachPic center d-block">               
 
-                                <a href="#" class="btn btn-primary ">Contact</a>
+                                <a href="#" class="btn btn-primary teacherA">Contact</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
                                         <img src="../images/teacherC.png" alt="teacherC" class="teachPic center d-block">
         
         
-                                        <a href="#" class="btn btn-primary ">Contact</a>
+                                        <a href="#" class="btn btn-primary teacherC">Contact</a>
                                     </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                                         <img src="../images/teacherB.png" alt="teacherB" class="teachPic center d-block">
         
         
-                                        <a href="#" class="btn btn-primary ">Contact</a>
+                                        <a href="#" class="btn btn-primary teacherB">Contact</a>
                                     </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                                         <img src="../images/teacherD.png" alt="teacherD" class="teachPic center d-block">
         
         
-                                        <a href="#" class="btn btn-primary ">Contact</a>
+                                        <a href="#" class="btn btn-primary teacherD">Contact</a>
                                     </div>
                         </div>
                     </div>
@@ -125,6 +125,34 @@
 
             </div>
         </div>
+
+        <div class="card emailBoxOne">
+                <div class="card-header">
+                  Email to: 
+                </div>
+                <div class="card-body">
+                 
+
+                        <form id="emailBox" action="" method="POST" class="form-inline ">
+
+                                <div class="form-group">
+            
+                                  <!-- <label for="teachComment" class="sr-only">Comment:</label> -->
+                                  <!-- <p class="markerFont mr-3">Teacher Comments: </p> -->
+            
+                                  <textarea name="parEmailBox" id="emailContactBox" cols="90" class="d-block"
+                                    placeholder="My email..."></textarea>
+            
+            
+                                </div>
+            
+                              </form>
+
+
+
+                  <a href="#" class="btn btnEmailOne btn-primary">Send Email</a>
+                </div>
+              </div>
 
         <div class="card mb-3">
                 <h2 class="card-header text-center markerFont bg-dark text-white">First Grade</h2>
@@ -414,6 +442,36 @@
   <script>
     $(document).ready(function () {
         console.log('contact page is ready')
+
+
+
+
+        $('.emailBoxOne').hide()
+
+        $('.teacherA').on('click', function(e){
+            e.preventDefault();
+            $('.emailBoxOne').toggle()
+
+            $('.btnEmailOne').on('click', function(event){
+                event.preventDefault();
+                console.log('email is ready to be sent')
+
+
+                var firstEmailBox = $('#emailContactBox').val().trim()
+                console.log('the message: '+ firstEmailBox )
+
+               return $('#emailContactBox').val().trim("")
+            })
+
+
+
+
+
+
+        })
+
+
+
     })
 
 

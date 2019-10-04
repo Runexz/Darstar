@@ -16,10 +16,13 @@ $(document).ready(function () {
 
   //moment JS 
   var currTime = moment().format('llll');
+  var parDate = moment().format('L')
 
   console.log(currTime);
 
   $('.dateMoment').text(currTime);
+  $('.dateParent').text(parDate);
+
 
 
 
@@ -189,36 +192,12 @@ $.ajax({
 
 })
 
-//api for time
-// var APIkeyTime = '';
 
 
-// var queryURL = 'https://world-clock.p.rapidapi.com/json/utc/now'
 
-
-// $.ajax({
-//   url: queryURL,
-//   method: 'GET'
-
-// }).then(function (timeNow) {
-
-
-//   // city///////////////////////////////////////////////
-//   console.log(timeNow)
-
-
-//   // var cityName = weather.name
-//   // console.log(cityName)
-
-
-// })
 
 //widget--------------------------------------------------------------------------------//
 
 window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 15, cityid: '4684888', appid: 'fb0ce6d825db30974bf096625bf170a2', units: 'imperial', containerid: 'openweathermap-widget-15', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
 //--------------------------------------------------------------------------------------------//
 
-// var moment = require("moment");
-// var currentDate = moment();
-
-// console.log(currentDate)
