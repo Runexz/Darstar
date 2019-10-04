@@ -18,24 +18,24 @@ $(document).ready(function () {
 
 
 
-    $("#form").submit(function (event) {
-      var textarea = $("#inputPassword3");
-      console.log(textarea.val().trim())
-      var studentIdTeacher = parseInt(textarea.val().trim());
-      console.log(studentIdTeacher);
-      if (textarea.val().trim() === "") {
-        // No message, add red highlighting to indicate error
-        textarea.css("box-shadow", "0 0 12px #811");
-        $('.teacherLogAppend').text("Please enter the student's ID")
-        $('.teacherLogAppend').slideDown()
-        event.preventDefault();
+$("#form").submit(function (event) {
+  var textarea = $("#inputPassword3");
+  console.log(textarea.val().trim())
+  var studentIdTeacher = parseInt(textarea.val().trim());
+  console.log(studentIdTeacher);
+  if (textarea.val().trim() === "") {
+    // No message, add red highlighting to indicate error
+    textarea.css("box-shadow", "0 0 12px #811");
+    $('.teacherLogAppend').text("Please enter the student's ID")
+    $('.teacherLogAppend').slideDown()
+    event.preventDefault();
 
-      } else {
-        API.getStudentbyId(studentIdTeacher);
-         
-        console.log('form is completed')
+  } else {
+    API.getStudentbyId(studentIdTeacher);
 
-        $('.jumbotron').slideUp();
+    console.log('form is completed')
+
+    $('.jumbotron').slideUp();
 
 
     /////////////////////////////////////////////////////////////////////////////////////
@@ -126,7 +126,7 @@ $('.teachBehavLog').on('click', function (event) {
   var currTimeTeach = moment().format('LTS')
   var currDateTeach = moment().format('L');
 
-  console.log(currTimeTeach);
+  console.log(currDateTeach);
 
 
 
@@ -154,7 +154,7 @@ $('.teachBehavLog').on('click', function (event) {
 
   }
 
-      
+
 
 
 
@@ -205,11 +205,11 @@ $('.teachBehavLog').on('click', function (event) {
 
   console.log("teacher comment: " + teacherCommment)
 
-      
-      var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
-      if (radioValue) {
-        console.log("perseverance: " + radioValue);
-      }
+
+  var radioValue = $("input[name='inlineRadioOptions4']:checked").val();
+  if (radioValue) {
+    console.log("perseverance: " + radioValue);
+  }
 
 
 
@@ -330,15 +330,15 @@ $('.adminPage').on('click', function () {
 
 
 
-   
 
 
 
 
-     
 
-      
-      
+
+
+
+
 
 })
 

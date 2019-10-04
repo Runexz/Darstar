@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "232400",
-    "database": "darstardb",
-    "host": "localhost",
+    "username": "ugwm1lhgdahm7j0t",
+    "password": "gd7dycu265umn012",
+    "database": "rsg919mcacujkms2",
+    "host": "axxb6a0z2kydkco3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
