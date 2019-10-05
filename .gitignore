@@ -2,7 +2,7 @@
 node_modules
 npm-debug.log
 .env
-config/config.json
+# config/config.json
 
 .env.local
 .env.development.local
