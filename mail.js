@@ -4,8 +4,8 @@ const mailGun = require('nodemailer-mailgun-transport');
 
 const auth = {
     auth: {
-        api_key: "93dacb503f2ddbeed1b08e26374b14d8-af6c0cec-e5e4bd80", // TODO: Replace with your mailgun API KEY
-        domain: "sandbox54b1872dba614f06bd96e9a282691bbf.mailgun.org" // TODO: Replace with your mailgun DOMAIN
+        api_key: "d1b90b577df6ea63fb074c511d5ed164-af6c0cec-c745a6e9", // TODO: Replace with your mailgun API KEY
+        domain: "sandboxe6d94f87cefd4a62bcaa1da8c695c514.mailgun.org" // TODO: Replace with your mailgun DOMAIN
     }
 };
 
@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport(mailGun(auth));
 const sendMail = (email, subject, text, cb) => {
     const mailOptions = {
         from: email,
-        to: 'groupsmubootcamp@gmail.com',
+        to: 'darstarinc@gmail.com ',
         subject,
         text
     };
